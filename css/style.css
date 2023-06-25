@@ -3,6 +3,13 @@
 body {
   font-family: "Poppins", "Roboto", sans-serif;
 }
+.about-me h2,
+#services h2,
+#portfolio h2,
+#portfolio .btns,
+.project-header {
+  font-family: "trebuchet ms", sans-serif !important;
+}
 
 /* For Webkit-based browsers (Chrome, Safari) */
 
@@ -38,7 +45,6 @@ a {
 }
 
 h2 {
-  font-family: "Poppins", "sans-seri" !important;
   font-weight: 700 !important;
 }
 .btn:focus {
@@ -501,9 +507,9 @@ header .datacamp {
 
 .hover-btn-bg {
   position: absolute;
-  margin: 3.31px;
-  height: 45px;
-  width: 148px;
+  margin: 3.29px;
+  height: 46px;
+  width: 143px;
   background-color: black;
   left: 0;
   top: 0;

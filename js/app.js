@@ -195,20 +195,20 @@ buttons.forEach((button) => {
 
     // Set the width and transform properties based on the button id
     if (button.id === "selected-works") {
-      hoverBtnBg.style.width = "148px";
+      hoverBtnBg.style.width = "143px";
       hoverBtnBg.style.transform = "translateX(0%)";
     } else if (button.id === "e-commerce") {
-      hoverBtnBg.style.width = "135px";
-      hoverBtnBg.style.transform = "translateX(112%)";
+      hoverBtnBg.style.width = "127px";
+      hoverBtnBg.style.transform = "translateX(106%)";
     } else if (button.id === "healthcare") {
-      hoverBtnBg.style.width = "119px";
-      hoverBtnBg.style.transform = "translateX(239%)";
+      hoverBtnBg.style.width = "114px";
+      hoverBtnBg.style.transform = "translateX(223%)";
     } else if (button.id === "travel") {
-      hoverBtnBg.style.width = "82px";
-      hoverBtnBg.style.transform = "translateX(490%)";
+      hoverBtnBg.style.width = "73px";
+      hoverBtnBg.style.transform = "translateX(500%)";
     } else if (button.id === "other") {
-      hoverBtnBg.style.width = "78px";
-      hoverBtnBg.style.transform = "translateX(611%)";
+      hoverBtnBg.style.width = "72px";
+      hoverBtnBg.style.transform = "translateX(609%)";
     }
   });
 });
