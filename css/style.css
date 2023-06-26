@@ -198,15 +198,6 @@ header .arrow-down:hover {
   cursor: pointer;
 }
 
-/*
-header .datacamp {
-    color: #0072b1;
-}
-.datacamp:hover {
-    text-decoration: underline;
-}
-*/
-
 @media (max-width: 575px) {
   header .text-holder {
     max-width: none;
@@ -367,6 +358,7 @@ header .datacamp {
   font-size: 20px;
   line-height: 1.7;
   color: #ffffff;
+  font-family: "lato", sans-serif;
 }
 
 @media (min-width: 1200px) {
