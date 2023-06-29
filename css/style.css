@@ -1009,9 +1009,8 @@ body.light.contact .contactform textarea:focus,
 }
 
 @media (max-width: 575.9px) {
-  .contact .first,
-  .contact .sec {
-    font-size: 50px;
+  .contact-title {
+    font-size: 50px !important;
   }
 
   .contact .title-bg span {
@@ -1026,11 +1025,9 @@ body.light.contact .contactform textarea:focus,
 @media (min-width: 576px) and (max-width: 767.9px) {
   .contact-title {
     margin-left: 0rem !important;
+    font-size: 65px !important;
   }
-  .contact .first,
-  .contact .sec {
-    font-size: 65px;
-  }
+
   .contact .title-bg span {
     font-size: 90px;
     line-height: 3.8;
