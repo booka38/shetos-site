@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-let speed = 100;
 //arrow color
 
 const svgElement = document.querySelector(".arrow-down");
@@ -240,30 +238,6 @@ buttons.forEach((button) => {
         project.style.display = "none";
       }
     });
-    /////////let's work together animation
-
-    /* Clouds  */
-    if (
-      buttonId === "e-commerce" ||
-      buttonId === "healthcare" ||
-      buttonId === "travel" ||
-      buttonId === "other"
-    ) {
-      let clouds = gsap.timeline();
-      ScrollTrigger.create({
-        animation: clouds,
-        trigger: "#contact",
-        start: "top+=100 center", // Animation starts when the top of the contact element is 100 pixels below the top of the viewport
-        end: "bottom+=20", // Animation ends 300 pixels from the start position
-        scrub: 1,
-      });
-      clouds.to("#first", { x: -110 }, 0);
-      clouds.to("#sec", { x: 110 }, 0);
-      //reset scrollbar position after refresh
-      window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-      };
-    }
   });
 });
 
@@ -274,24 +248,7 @@ projects.forEach((project) => {
     ? "block"
     : "none";
 });
-/////////let's work together animation
 
-/* Clouds  */
-
-let clouds = gsap.timeline();
-ScrollTrigger.create({
-  animation: clouds,
-  trigger: "#contact",
-  start: "top+=100 center", // Animation starts when the top of the contact element is 100 pixels below the top of the viewport
-  end: "bottom+=20", // Animation ends 300 pixels from the start position
-  scrub: 1,
-});
-clouds.to("#first", { x: -110 }, 0);
-clouds.to("#sec", { x: 110 }, 0);
-//reset scrollbar position after refresh
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
 //on submit form
 let form = document.querySelector("#contact form");
 let sendingDiv = document.querySelector("#contact #sending"); // Assuming the div has the class 'sending'
@@ -338,4 +295,28 @@ form.addEventListener("submit", (e) => {
 let backTop = document.querySelector(".back-top");
 backTop.addEventListener("click", () => {
   window.scrollTo(0, 0);
+});
+
+//light effect
+function handleScrollInView(sectionId) {
+  let sectionElement = document.getElementById(sectionId);
+  let lightEl = sectionElement.querySelector(".light");
+  let sectionRect = sectionElement.getBoundingClientRect();
+  let windowHeight = window.innerHeight;
+
+  // Calculate the scroll position within the section
+  let scrollPosition = sectionRect.top - windowHeight * 0.3;
+
+  // Check if the scroll position is within the section
+  if (scrollPosition < 0 && sectionRect.bottom > 0) {
+    lightEl.classList.add("scroll-in-view");
+  } else {
+    lightEl.classList.remove("scroll-in-view");
+  }
+}
+
+window.addEventListener("scroll", function () {
+  handleScrollInView("services");
+  handleScrollInView("portfolio");
+  handleScrollInView("contact"); // Add scroll behavior for #contact section
 });

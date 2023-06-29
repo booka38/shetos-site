@@ -36,6 +36,8 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <!--linear font-->
+    <link href="https://fonts.cdnfonts.com/css/linear" rel="stylesheet">
     <!--wow files-->
     <link
       rel="stylesheet"
@@ -253,36 +255,16 @@
     <!-- end about-me -->
     <!-- start services -->
     <div id="services" class="py-5">
+      <div class="light"></div>
       <div class="container">
-        <h2 class="h1 pt-1 text-center">SERVICES</h2>
-        <div class="line-container mb-5">
-          <div class="line line1 pb-1"></div>
-          <div class="line line2 pb-1"></div>
-          <div class="line line1 pb-1"></div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <!-- 
-                <div class="col">
-                    <div class="card h-100 pt-3 hvr-glow">
-                        <img src="pics/data-cleaning-icon.svg" class="card-img-top text-center svg" style="max-width: 20%; margin-left: 16px" alt="data cleaning icon" />
-                        <img src="pics/data-cleaning-icon-hover.svg" class="card-img-top text-center svg-hover" style="max-width: 20%; margin-left: 16px; transform: scale(1.1)" alt="Reporting icon" />
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-md-start py-3">
-                                Data Cleaning and Preparation
-                            </h5>
-                            <div class="card-text text-start">
-                                <ul style="list-style-type: disc">
-                                    <li>Data cleaning using python libraries.</li>
-                                    <li>Data integration and transformation.</li>
-                                    <li>Data wrangling and data profiling.</li>
-                                    <li>Data quality assessment and improvement.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
--->
-          <div class="col">
+        <div class="text-center"></div>
+        <h2 class="h1 pt-1 text-center">
+          <span style="position: relative; z-index: 999">SERVICES</span> <br />
+          <span>WHAT CAN I OFFER?</span>
+        </h2>
+        
+        <div class="row mt-5 row-cols-1">
+          <div class="col text-center">
             <div class="card h-100 pt-3 hvr-glow">
               <div class="d-flex justify-content-center">
                 <img
@@ -317,8 +299,10 @@
               </div>
             </div>
           </div>
+          </div>
+          <div class="row mt-2 row-cols-1 row-cols-md-2 g-4">
           <div class="col">
-            <div class="card h-100 pt-3 hvr-glow">
+            <div class="card card-2 h-100 pt-3 hvr-glow">
               <div class="d-flex justify-content-center">
                 <img
                   src="pics/data management-icon.svg"
@@ -352,7 +336,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card h-100 pt-3 hvr-glow">
+            <div class="card card-3 h-100 pt-3 hvr-glow">
               <div class="d-flex justify-content-center">
                 <img
                   src="pics/analytics-icon.svg"
@@ -384,19 +368,20 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
     </div>
     <!-- end services -->
     <!-- start portfolio  -->
     <div id="portfolio" class="py-5">
+      <div class="light"></div>
       <div class="container">
-        <h2 class="h1 text-center">PORTFOLIO</h2>
-        <div class="line-container mb-5">
-          <div class="line line1 pb-1"></div>
-          <div class="line line2 pb-1"></div>
-          <div class="line line1 pb-1"></div>
-        </div>
-        <div class="btns-holder text-center">
+        <h2 class="h1 text-center">
+          <span style="position: relative; z-index: 999">PORTFOLIO</span>
+          <br />
+          <span>Results-Driven Project Samples</span>
+        </h2>
+        <div class="btns-holder mt-5 text-center">
           <div class="btns text-center p-2">
             <div id="hover-btn-bg" class="hover-btn-bg"></div>
             <button type="button" id="selected-works" class="btn active-btn">
@@ -412,7 +397,7 @@
             <button type="button" id="other" class="btn">Other</button>
           </div>
         </div>
-        <div class="projects mt-5">
+        <div class="projects mt-3">
           <div class="projects-holder">
             <!-- super store project  -->
             <div class="project e-commerce selected-works">
@@ -1300,17 +1285,18 @@
     <!-- end portfolio -->
 
     <!-- start contact -->
-    <div id="contact" class="pt-2 pb-2 px-5 contact">
-      <div class="container">
-        <div class="contact-title">
-          <h2 id="first" class="first">Let's</h2>
-          <h2 id="sec" class="sec">Work Together</h2>
-        </div>
+    <div id="contact" class="pt-2 pb-2 contact">
+      <div class="light"></div>
+      <div class="container px-5">
+        <h2 class="contact-title text-center">
+          <span style="position: relative; z-index:999;">Let's Work</span>
+          <span > Together</>
+        </h2>
         <div class="title-bg">
           <span class="text-center">CONTACT</span>
         </div>
         <h2 id="get-touch" class="h1 text-center">
-          <span style="color: white"> GET </span> IN TOUCH
+          <span style="color: white"> GET </span> <span style="color:#e74d61">IN TOUCH</span> 
         </h2>
         <div class="row row-padding">
           <div class="col-12 col-md-4">
@@ -1503,8 +1489,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

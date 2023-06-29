@@ -9,6 +9,7 @@ body {
 #portfolio .btns,
 .project-header {
   font-family: "trebuchet ms", sans-serif !important;
+  color: rgb(247, 248, 248) !important;
 }
 
 /* For Webkit-based browsers (Chrome, Safari) */
@@ -23,25 +24,6 @@ a:hover {
 
 a {
   color: inherit;
-}
-
-.line-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.line-container .line {
-  border-bottom: 1px solid #e74d61;
-}
-
-.line1 {
-  width: 75px;
-}
-
-.line2 {
-  width: 160px;
 }
 
 h2 {
@@ -212,7 +194,7 @@ header .arrow-down:hover {
 /*  start about-me*/
 
 .about-me {
-  background-color: #111111;
+  background: linear-gradient(to top, #04071b 10%, #111111 90%);
   color: white;
 }
 
@@ -436,13 +418,85 @@ header .arrow-down:hover {
 /*  start services*/
 
 #services {
-  background-color: #111111;
+  background: #000213;
   color: white;
+}
+.light {
+  width: 100%;
+  height: 600px;
+  margin-bottom: -220px;
+  margin-top: -200px;
+  user-select: none;
+  -webkit-mask-image: radial-gradient(
+    100% 50% at center center,
+    black,
+    transparent
+  );
+  background-image: conic-gradient(from 90deg at 80% 50%, #303a75, #000212),
+    conic-gradient(from 270deg at 20% 50%, #000212, #303a75);
+  background-attachment: scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: 1%, 99%;
+  background-position-y: 0%, 0%;
+  background-size: 50% 100%, 50% 100%;
+  opacity: 1;
+  transform-origin: center center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease; /* Add smooth transition effect */
+}
+
+.light::before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 600px;
+  margin-bottom: -220px;
+  margin-top: -200px;
+  user-select: none;
+  -webkit-mask-image: radial-gradient(
+    100% 50% at center center,
+    black,
+    transparent
+  );
+  background-image: conic-gradient(from 90deg at 40% 50%, #7c8ad8, #000212),
+    conic-gradient(from 270deg at 60% 50%, #000212, #7c8ad8);
+  background-attachment: scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: 1%, 99%;
+  background-position-y: 0%, 0%;
+  background-size: 50% 100%, 50% 100%;
+  transform-origin: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.scroll-in-view::before {
+  opacity: 1;
 }
 
 #services .card {
-  background-color: #111111;
-  border: 0px;
+  position: relative;
+  background: radial-gradient(
+    at center center,
+    rgba(194, 97, 254, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border-style: solid;
+  border-width: 1px;
+  border-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    )
+    1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+#services .card-text {
+  color: rgb(180, 188, 208);
 }
 
 #services .hvr-glow:hover {
@@ -464,11 +518,14 @@ header .arrow-down:hover {
 /* start portfolio */
 
 #portfolio {
-  background-color: #111111;
+  background: #000213;
 }
 #portfolio .project {
-  background-color: #10101a;
-  border: 1px solid #fffcff1a;
+  background-image: radial-gradient(
+    at center center,
+    rgba(0, 225, 244, 0.15),
+    rgba(255, 255, 255, 0)
+  );
   border-radius: 15px;
   margin-bottom: 5vh;
 }
@@ -598,13 +655,13 @@ header .arrow-down:hover {
   transform: translate(2px, 2px);
 }
 
-#portfolio .project-header,
 #portfolio .project-content {
-  color: white;
+  color: rgb(180, 188, 208);
 }
 #portfolio .project-header {
   font-size: 30px;
   font-weight: 600;
+  color: white;
 }
 #portfolio .project-content {
   font-size: 20px;
@@ -612,7 +669,7 @@ header .arrow-down:hover {
   line-height: 1.5;
 }
 #portfolio .read-more {
-  color: white;
+  color: rgb(180, 188, 208);
   font-size: 20px;
   padding: 0;
 }
@@ -685,30 +742,14 @@ header .arrow-down:hover {
 /*  start contact*/
 
 .contact {
-  background-color: #111111;
-  padding-left: 5rem;
-  padding-right: 6rem;
+  background: #000213;
 }
 
-@media (min-width: 767.9px) {
-  .contact {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
-
-.contact .first,
-.contact .sec {
+.contact .contact-title {
   font-family: "poppins", sans-serif;
   font-size: 90px;
-  color: white;
-  position: relative;
+  color: rgb(247, 248, 248) !important;
   font-weight: 500 !important;
-  /* transition: transform 0.5s ease-in-out; */
-}
-
-.sec {
-  padding-bottom: 5rem;
 }
 
 .contact .row-padding {
@@ -728,7 +769,6 @@ header .arrow-down:hover {
 }
 
 .contact h2 {
-  color: #e74d61;
   font-size: 56px;
   font-weight: 900 !important;
 }
@@ -764,11 +804,6 @@ header .arrow-down:hover {
   line-height: 3.23;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.07);
-}
-
-.contact h2 {
-  position: relative;
-  top: 1px;
 }
 
 .contact p {
@@ -1044,7 +1079,7 @@ body.light.contact .contactform textarea:focus,
 .back-top button {
   width: 150px;
   height: 50px;
-  margin: 20px;
+  margin: 35px;
   color: white;
   position: relative;
   overflow: hidden;
@@ -1097,3 +1132,5 @@ body.light.contact .contactform textarea:focus,
   position: absolute;
   left: 0px;
 }
+
+/* end back top button */
