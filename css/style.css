@@ -59,7 +59,7 @@ nav::before {
   height: 100%;
   background-image: url(/pics/header-bg2.svg),
     linear-gradient(45deg, rgb(255 255 255 / 0%) 22%, rgb(196 123 82 / 0%) 100%),
-    url(/pics/nav-bg.jpg);
+    url(/pics/nav-bg.avif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
