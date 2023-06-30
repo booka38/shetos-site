@@ -266,37 +266,70 @@
                 class="card-img-top text-center dashboard-animation "
                 style="max-width: 250px; margin-bottom:-36px;"
                 >
-<script>
-  let animation;
+                <script>
 
-  // Load the animation when the page is fully loaded
-  window.addEventListener('DOMContentLoaded', function () {
-    animation = bodymovin.loadAnimation({
-      container: document.querySelector("#dashboard-animation"),
-      path: 'pics/techny-data-dashboard.json',
-      renderer: "svg",
-      loop: true,
-      autoplay: false, // Set autoplay to false initially
-      name: "Dashboard Animation",
-    });
-  });
+                let animation;
 
-  // Play the animation when hovering over the container or .card-dash
-  function playAnimation() {
-    animation.play();
-  }
-
-  // Pause the animation when the mouse leaves the container or .card-dash
-  function pauseAnimation() {
-    animation.pause();
-  }
-
-  // Add event listeners to both elements
-  document.querySelector("#dashboard-animation").addEventListener('mouseenter', playAnimation);
-  document.querySelector("#dashboard-animation").addEventListener('mouseleave', pauseAnimation);
-  document.querySelector(".card-dash").addEventListener('mouseenter', playAnimation);
-  document.querySelector(".card-dash").addEventListener('mouseleave', pauseAnimation);
-</script>
+                // Declare a global variable to store the paths
+                let paths;
+                
+                // Function to load the animation and get the paths
+                async function loadAnimationAndPaths() {
+                  // Load the animation
+                  animation = bodymovin.loadAnimation({
+                    container: document.querySelector("#dashboard-animation"),
+                    path: 'pics/techny-data-dashboard.json',
+                    renderer: "svg",
+                    loop: true,
+                    autoplay: false, // Set autoplay to false initially
+                    name: "Dashboard Animation",
+                  });
+                
+                  // Wait for the animation to be ready
+                  await new Promise((resolve) => {
+                    animation.addEventListener('DOMLoaded', resolve);
+                  });
+                
+                  // Get the paths
+                  paths = document.querySelectorAll("#dashboard-animation svg g g path");
+                  paths.forEach((path) => {
+                    if (
+                      path.getAttribute("fill") === "rgb(176,195,255)" ||
+                      path.getAttribute("fill") === "rgb(54,88,193)" ||
+                      path.getAttribute("fill") === "rgb(176,195,255);" ||
+                      path.getAttribute("fill") === "rgb(54,88,193)" ||
+                      path.getAttribute("fill") === "rgb(17,17,17" ||
+                      path.getAttribute("fill") === "rgb(176,195,255)" ||
+                      path.getAttribute("stroke") === "rgb(17,17,17);" 
+                    ) {
+                      path.setAttribute("fill", "#e74d61");
+                      path.setAttribute("stroke", "#e74d61");
+                    }
+                  });
+                
+                  // Now you can use the 'paths' variable as needed
+                }
+                
+                // Load the animation and get the paths when the page is fully loaded
+                window.addEventListener('DOMContentLoaded', loadAnimationAndPaths);
+                
+                // Play the animation when hovering over the container or .card-dash
+                function playAnimation() {
+                  animation.play();
+                }
+                
+                // Pause the animation when the mouse leaves the container or .card-dash
+                function pauseAnimation() {
+                  animation.pause();
+                }
+                
+                // Add event listeners to both elements
+                document.querySelector("#dashboard-animation").addEventListener('mouseenter', playAnimation);
+                document.querySelector("#dashboard-animation").addEventListener('mouseleave', pauseAnimation);
+                document.querySelector(".card-dash").addEventListener('mouseenter', playAnimation);
+                document.querySelector(".card-dash").addEventListener('mouseleave', pauseAnimation);
+                
+              </script>
 
                 </div>
               </div>
@@ -322,7 +355,7 @@
           </div>
           <div class="row mt-2 row-cols-1 row-cols-md-2 g-4">
           <div class="col">
-            <div class="card  h-100 pt-3 hvr-glow">
+            <div class="card card-hover  h-100 pt-3 hvr-glow">
               <div class="d-flex justify-content-center">
                 <img
                   src="pics/data management-icon.svg"
@@ -356,7 +389,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card h-100 pt-3 hvr-glow">
+            <div class="card card-hover h-100 pt-3 hvr-glow">
               <div class="d-flex justify-content-center">
                 <img
                   src="pics/analytics-icon.svg"
