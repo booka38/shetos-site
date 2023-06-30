@@ -194,7 +194,7 @@ header .arrow-down:hover {
 /*  start about-me*/
 
 .about-me {
-  background: linear-gradient(to top, #04071b 10%, #111111 90%);
+  background: linear-gradient(to top, #130000 10%, #111111 90%);
   color: white;
 }
 
@@ -418,7 +418,7 @@ header .arrow-down:hover {
 /*  start services*/
 
 #services {
-  background: #000213;
+  background: #130000;
   color: white;
 }
 .light {
@@ -432,8 +432,8 @@ header .arrow-down:hover {
     black,
     transparent
   );
-  background-image: conic-gradient(from 90deg at 80% 50%, #303a75, #000212),
-    conic-gradient(from 270deg at 20% 50%, #000212, #303a75);
+  background-image: conic-gradient(from 90deg at 80% 50%, #66212a, #000212),
+    conic-gradient(from 270deg at 20% 50%, #000212, #66212a);
   background-attachment: scroll;
   background-origin: padding-box, padding-box;
   background-clip: border-box;
@@ -460,8 +460,8 @@ header .arrow-down:hover {
     black,
     transparent
   );
-  background-image: conic-gradient(from 90deg at 40% 50%, #7c8ad8, #000212),
-    conic-gradient(from 270deg at 60% 50%, #000212, #7c8ad8);
+  background-image: conic-gradient(from 90deg at 40% 50%, #e74d61, #000212),
+    conic-gradient(from 270deg at 60% 50%, #000212, #e74d61);
   background-attachment: scroll;
   background-origin: padding-box, padding-box;
   background-clip: border-box;
@@ -504,12 +504,17 @@ header .arrow-down:hover {
 }
 
 @media (max-width: 767px) {
-  #services .card img {
-    margin: 0px 40% !important;
-  }
   #services .col {
     max-width: 388px;
     margin: 5px auto;
+  }
+  #services #dashboard-animation {
+    max-width: 190px !important;
+  }
+}
+@media (max-width: 576px) {
+  #services #dashboard-animation {
+    max-width: 130px !important;
   }
 }
 
@@ -518,7 +523,7 @@ header .arrow-down:hover {
 /* start portfolio */
 
 #portfolio {
-  background: #000213;
+  background: #130000;
 }
 #portfolio .project {
   background-image: radial-gradient(
@@ -742,7 +747,7 @@ header .arrow-down:hover {
 /*  start contact*/
 
 .contact {
-  background: #000213;
+  background: #130000;
 }
 
 .contact .contact-title {

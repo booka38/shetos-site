@@ -42,6 +42,7 @@
     <link href="css/hover-min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
@@ -252,32 +253,58 @@
       <div class="container">
         <div class="text-center"></div>
         <h2 class="h1 pt-1 text-center">
-          <span style="position: relative; z-index: 999">SERVICES</span> <br />
-          <span>WHAT CAN I OFFER?</span>
+          <span style="position: relative; z-index: 999">WHAT I</span> <br />
+          <span>CAN OFFER</span>
         </h2>
         
         <div class="row mt-5 row-cols-1">
           <div class="col text-center">
-            <div class="card h-100 pt-3 hvr-glow">
+            <div class="card h-100 pt-0 hvr-glow card-dash">
               <div class="d-flex justify-content-center">
-                <img
-                  src="pics/dashboard.svg"
-                  class="card-img-top text-center svg"
-                  style="max-width: 23%"
-                  alt="Reporting icon"
-                />
-                <img
-                  src="pics/dashboard-hover.svg"
-                  class="card-img-top text-center svg-hover dashboard-hover"
-                  style="max-width: 23%; transform: scale(1.1)"
-                  alt="Reporting icon"
-                />
+                <div
+                id="dashboard-animation"
+                class="card-img-top text-center dashboard-animation "
+                style="max-width: 250px; margin-bottom:-36px; fill:#e74d61"
+                >
+<script>
+  let animation;
+
+  // Load the animation when the page is fully loaded
+  window.addEventListener('DOMContentLoaded', function () {
+    animation = bodymovin.loadAnimation({
+      container: document.querySelector("#dashboard-animation"),
+      path: 'pics/techny-data-dashboard.json',
+      renderer: "svg",
+      loop: true,
+      autoplay: false, // Set autoplay to false initially
+      name: "Dashboard Animation",
+    });
+  });
+
+  // Play the animation when hovering over the container or .card-dash
+  function playAnimation() {
+    animation.play();
+  }
+
+  // Pause the animation when the mouse leaves the container or .card-dash
+  function pauseAnimation() {
+    animation.pause();
+  }
+
+  // Add event listeners to both elements
+  document.querySelector("#dashboard-animation").addEventListener('mouseenter', playAnimation);
+  document.querySelector("#dashboard-animation").addEventListener('mouseleave', pauseAnimation);
+  document.querySelector(".card-dash").addEventListener('mouseenter', playAnimation);
+  document.querySelector(".card-dash").addEventListener('mouseleave', pauseAnimation);
+</script>
+
+                </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title text-center py-3">
+                <h5 class="card-title text-center pb-3">
                   Reporting and Dashboard Creation
                 </h5>
-                <div class="card-text">
+                <div class="card-text text-start">
                   <ul style="list-style-type: disc">
                     <li>Interactive dashboard design.</li>
                     <li>Data-driven decision-making support.</li>
@@ -370,9 +397,9 @@
       <div class="light"></div>
       <div class="container">
         <h2 class="h1 text-center">
-          <span style="position: relative; z-index: 999">PORTFOLIO</span>
+          <span style="position: relative; z-index: 999">Results-Driven</span>
           <br />
-          <span>Results-Driven Project Samples</span>
+          <span>Project Samples</span>
         </h2>
         <div class="btns-holder mt-5 text-center">
           <div class="btns text-center p-2">
