@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //icons of about me
   const imageContainer = document.querySelector(".img-overlay");
   const icons = document.querySelector("#about-me .icons");
-  console.log(icons);
 
   imageContainer.addEventListener("mouseover", () => {
     icons.classList.add("about-me-active");
@@ -161,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //hover on svg icons
-let cards = document.querySelectorAll("#services .card");
+let cards = document.querySelectorAll("#services .card-hover");
 let svgHover = document.querySelectorAll("#services .svg-hover");
 // Initially hide all svgHover
 svgHover.forEach((element) => {

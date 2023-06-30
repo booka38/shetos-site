@@ -315,11 +315,13 @@
                 
                 // Play the animation when hovering over the container or .card-dash
                 function playAnimation() {
+                  document.querySelector("#dashboard-animation").style.transform = "scale(1.1)";
                   animation.play();
                 }
                 
                 // Pause the animation when the mouse leaves the container or .card-dash
                 function pauseAnimation() {
+                  document.querySelector("#dashboard-animation").style.transform = "scale(1)";
                   animation.pause();
                 }
                 
