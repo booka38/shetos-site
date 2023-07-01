@@ -11,6 +11,16 @@ body {
   font-family: "trebuchet ms", sans-serif !important;
   color: rgb(247, 248, 248) !important;
 }
+#services h2,
+#portfolio h2 {
+  font-size: 60px;
+}
+@media (max-width: 575px) {
+  #services h2,
+  #portfolio h2 {
+    font-size: 40px;
+  }
+}
 
 /* For Webkit-based browsers (Chrome, Safari) */
 
@@ -418,7 +428,7 @@ header .arrow-down:hover {
 /*  start services*/
 
 #services {
-  background: #130000;
+  background: linear-gradient(to bottom, #130000 32%, #0b1423 113%);
   color: white;
 }
 .light {
@@ -432,8 +442,6 @@ header .arrow-down:hover {
     black,
     transparent
   );
-  background-image: conic-gradient(from 90deg at 80% 50%, #66212a, #000212),
-    conic-gradient(from 270deg at 20% 50%, #000212, #66212a);
   background-attachment: scroll;
   background-origin: padding-box, padding-box;
   background-clip: border-box;
@@ -461,8 +469,6 @@ header .arrow-down:hover {
     black,
     transparent
   );
-  background-image: conic-gradient(from 90deg at 40% 50%, #e74d61, #000212),
-    conic-gradient(from 270deg at 60% 50%, #000212, #e74d61);
   background-attachment: scroll;
   background-origin: padding-box, padding-box;
   background-clip: border-box;
@@ -475,11 +481,34 @@ header .arrow-down:hover {
   opacity: 0;
   transition: opacity 0.7s ease;
 }
+.light-red {
+  background-image: conic-gradient(from 90deg at 80% 50%, #66212a, #000212),
+    conic-gradient(from 270deg at 20% 50%, #000212, #66212a);
+}
+.light-green {
+  background-image: conic-gradient(
+      from 90deg at 80% 50%,
+
+      rgb(31, 49, 64),
+      rgb(0, 2, 18)
+    ),
+    conic-gradient(from 270deg at 20% 50%, rgb(0, 2, 18), rgb(31, 49, 64));
+}
+.light-red::before {
+  background-image: conic-gradient(from 90deg at 40% 50%, #e74d61, #000212),
+    conic-gradient(from 270deg at 60% 50%, #000212, #e74d61);
+}
+.light-green::before {
+  background-image: conic-gradient(from 90deg at 40% 50%, #5683aa, #000212),
+    conic-gradient(from 270deg at 60% 50%, #000212, #5683aa);
+}
 .scroll-in-view::before {
   opacity: 1;
 }
 
-#services .card {
+#services .card-services {
+  display: block;
+  height: 100%;
   position: relative;
   background: radial-gradient(
     at center center,
@@ -496,6 +525,10 @@ header .arrow-down:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
 }
+#services .svg,
+#services .svg-hover {
+  max-width: 90px;
+}
 #services .card-text {
   color: rgb(180, 188, 208);
 }
@@ -503,7 +536,15 @@ header .arrow-down:hover {
 #services .hvr-glow:hover {
   box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 0.82);
 }
-
+#services #dashboard-animation {
+  max-width: 295px;
+  transform: scale(1);
+  position: relative;
+  left: 50%;
+  margin-bottom: -97px;
+  top: 50%;
+  transform: translate(-52%, -58%) !important;
+}
 @media (max-width: 767px) {
   #services .col {
     max-width: 388px;
@@ -511,6 +552,11 @@ header .arrow-down:hover {
   }
   #services #dashboard-animation {
     max-width: 190px !important;
+    margin-bottom: -46px;
+  }
+  #services .svg,
+  #services .svg-hover {
+    max-width: 70px;
   }
 }
 @media (max-width: 576px) {
@@ -524,7 +570,7 @@ header .arrow-down:hover {
 /* start portfolio */
 
 #portfolio {
-  background: #130000;
+  background: linear-gradient(to top, #130000 32%, #0b1423 113%);
 }
 #portfolio .project {
   background-image: radial-gradient(
