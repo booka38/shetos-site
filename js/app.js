@@ -1,29 +1,25 @@
-//arrow color
-
+// Arrow color
 const svgElement = document.querySelector(".arrow-down");
-
-// Set the fill and stroke color to white
 svgElement.style.fill = "#ffffff";
 svgElement.style.stroke = "#ffffff";
 
-//import elements
-let lis = document.querySelectorAll(".navbar-nav li");
+// Navigation
+const navbar = document.getElementById("navbar");
+const navbarItems = document.querySelectorAll(".navbar-nav li");
 
-//active nav
-lis[0].classList.add("active");
-lis.forEach(function (e) {
-  e.addEventListener("click", function () {
-    lis.forEach(function (ele) {
-      ele.classList.remove("active");
-    });
-    e.classList.add("active");
+function setActiveNavItem(navItem) {
+  navbarItems.forEach((item) => item.classList.remove("active"));
+  navItem.classList.add("active");
+}
+
+navbarItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    setActiveNavItem(item);
   });
 });
-//nav background
-window.addEventListener("scroll", function () {
-  var navbar = document.getElementById("navbar");
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+window.addEventListener("scroll", () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop === 0) {
     navbar.classList.add("transparent-bg");
   } else {
@@ -31,151 +27,108 @@ window.addEventListener("scroll", function () {
   }
 });
 
-//nav visible && hidden along scrolling
-var navbar = document.getElementById("navbar");
-var previousScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-window.addEventListener("scroll", function () {
-  var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
+let previousScroll = window.pageYOffset || document.documentElement.scrollTop;
+window.addEventListener("scroll", () => {
+  const currentScroll =
+    window.pageYOffset || document.documentElement.scrollTop;
   if (currentScroll > previousScroll) {
-    // Scrolling down
     navbar.classList.add("hidden");
   } else if (currentScroll < previousScroll) {
-    // Scrolling up
     navbar.classList.remove("hidden");
   }
-
   if (currentScroll === 0) {
-    // At the top
     navbar.classList.remove("hidden");
   }
-
   previousScroll = currentScroll;
 });
 
-// Get all the <li> elements inside the navbar
-const navbarItems = document.querySelectorAll(".navbar-nav li");
-navbarItems.forEach((item) => {
-  item.classList.remove("active");
-});
-// Function to handle scroll event
-const handleScroll = () => {
+// Handle scroll event
+function handleScroll() {
   const scrollPosition = window.scrollY;
   const scrollHeight = document.documentElement.scrollHeight;
   const windowHeight = window.innerHeight;
   const header = document.querySelector("header");
 
-  // Check if the scroll position is within the header section
   if (
     scrollPosition >= header.offsetTop &&
     scrollPosition < header.offsetTop + header.offsetHeight
   ) {
-    // Remove the "active" class from all <li> elements
-    navbarItems.forEach((item) => {
-      item.classList.remove("active");
-    });
+    navbarItems.forEach((item) => item.classList.remove("active"));
   } else if (scrollPosition + windowHeight >= scrollHeight - 150) {
-    // Iterate over each <li> element
     navbarItems.forEach((item) => {
       const href = item.querySelector("a").getAttribute("href");
       if (href === "#contact") {
-        item.classList.add("active"); // Add the "active" class to the last <li> with href="#contact"
+        setActiveNavItem(item);
       } else {
-        item.classList.remove("active"); // Remove the "active" class from other <li> elements
+        item.classList.remove("active");
       }
     });
   } else {
-    // Iterate over each <li> element
     navbarItems.forEach((item) => {
       const href = item.querySelector("a").getAttribute("href");
       const section = document.querySelector(href);
-
-      // Check if the section is visible in the viewport with an additional offset of 150 pixels
       if (
         section.offsetTop - 150 < scrollPosition &&
         section.offsetTop + section.offsetHeight > scrollPosition
       ) {
-        // Remove the "active" class from other <li> elements
         navbarItems.forEach((otherItem) => {
           if (otherItem !== item) {
             otherItem.classList.remove("active");
           }
         });
-
-        item.classList.add("active"); // Add the "active" class to the corresponding <li>
+        setActiveNavItem(item);
       } else {
-        item.classList.remove("active"); // Remove the "active" class from other <li> elements
+        item.classList.remove("active");
       }
     });
   }
-};
+}
 
-// Attach the scroll event listener to the window object
 window.addEventListener("scroll", handleScroll);
 
-// Add event listener for scroll
-window.addEventListener("scroll", handleScroll);
+document.addEventListener("DOMContentLoaded", () => {
+  const hireMeLink = document.querySelector(".hire-me");
+  const showCVLink = document.querySelector(".show-cv");
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the hire-me and show-cv elements
-  var hireMeLink = document.querySelector(".hire-me");
-  var showCVLink = document.querySelector(".show-cv");
-
-  // Add a click event listener to the hire-me link
-  hireMeLink.addEventListener("click", function (event) {
+  hireMeLink.addEventListener("click", (event) => {
     event.preventDefault();
-
-    // Get the target element by ID
-    var targetElement = document.getElementById("get-touch");
+    const targetElement = document.getElementById("get-touch");
     if (targetElement) {
-      // Scroll to the target element
       targetElement.scrollIntoView();
     }
   });
 
-  //icons of about me
   const imageContainer = document.querySelector(".img-overlay");
   const icons = document.querySelector("#about-me .icons");
 
-  imageContainer.addEventListener("mouseover", () => {
+  imageContainer.addEventListener("mouseenter", () => {
     icons.classList.add("about-me-active");
   });
 
-  imageContainer.addEventListener("mouseout", () => {
+  imageContainer.addEventListener("mouseleave", () => {
     icons.classList.remove("about-me-active");
   });
 
-  // Add a click event listener to the show-cv link
-  showCVLink.addEventListener("click", function (event) {
+  showCVLink.addEventListener("click", (event) => {
     event.preventDefault();
-
-    // Specify the target URL
-    var targetURL =
+    const targetURL =
       "https://drive.google.com/file/d/1oGcHj8OxaJp7gOGS6Qg7pyf2_byUv3Tm/view?usp=drivesdk";
-
-    // Open the target URL in a new tab or window
     window.open(targetURL, "_blank");
   });
 });
 
-//hover on svg icons
-let cards = document.querySelectorAll("#services .card-hover");
-let svgHover = document.querySelectorAll("#services .svg-hover");
-// Initially hide all svgHover
-svgHover.forEach((element) => {
-  element.style.display = "none";
-});
+// Hover on SVG icons
+const cards = document.querySelectorAll("#services .card-hover");
 cards.forEach((card) => {
-  let svgHover = card.querySelector(".svg-hover");
-  let svg = card.querySelector(".svg");
+  const svgHover = card.querySelector(".svg-hover");
+  const svg = card.querySelector(".svg");
 
-  card.addEventListener("mouseover", () => {
+  card.addEventListener("mouseenter", () => {
     svgHover.style.display = "block";
     svg.style.display = "none";
   });
 
-  card.addEventListener("mouseout", () => {
+  card.addEventListener("mouseleave", () => {
     svgHover.style.display = "none";
     svg.style.display = "block";
   });
@@ -187,28 +140,15 @@ const buttons = document.querySelectorAll("#portfolio .btns button");
 // Add hover event listener to each button
 buttons.forEach((button) => {
   button.addEventListener("mouseover", () => {
-    // Get the hover button background element
     const hoverBtnBg = document.querySelector("#portfolio .btns .hover-btn-bg");
+    const width = button.dataset.width;
+    const transform = button.dataset.transform;
 
-    // Set the width and transform properties based on the button id
-    if (button.id === "selected-works") {
-      hoverBtnBg.style.width = "143px";
-      hoverBtnBg.style.transform = "translateX(0%)";
-    } else if (button.id === "e-commerce") {
-      hoverBtnBg.style.width = "127px";
-      hoverBtnBg.style.transform = "translateX(106%)";
-    } else if (button.id === "healthcare") {
-      hoverBtnBg.style.width = "114px";
-      hoverBtnBg.style.transform = "translateX(223%)";
-    } else if (button.id === "travel") {
-      hoverBtnBg.style.width = "73px";
-      hoverBtnBg.style.transform = "translateX(500%)";
-    } else if (button.id === "other") {
-      hoverBtnBg.style.width = "72px";
-      hoverBtnBg.style.transform = "translateX(609%)";
-    }
+    hoverBtnBg.style.width = width;
+    hoverBtnBg.style.transform = transform;
   });
 });
+
 // Add mouseout event listener to each button
 //if the button is not active set color to black
 buttons.forEach((button) => {
