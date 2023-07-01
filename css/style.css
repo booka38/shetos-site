@@ -538,7 +538,6 @@ header .arrow-down:hover {
 }
 #services #dashboard-animation {
   max-width: 295px;
-  transform: scale(1);
   position: relative;
   left: 50%;
   margin-bottom: -97px;

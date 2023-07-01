@@ -293,14 +293,14 @@
                   // Get the paths
                   paths = document.querySelectorAll("#dashboard-animation svg g g path");
                   paths.forEach((path) => {
+                    console.log(path.getAttribute("fill"), path.getAttribute("stroke"));
                     if (
                       path.getAttribute("fill") === "rgb(176,195,255)" ||
                       path.getAttribute("fill") === "rgb(54,88,193)" ||
-                      path.getAttribute("fill") === "rgb(176,195,255);" ||
-                      path.getAttribute("fill") === "rgb(54,88,193)" ||
-                      path.getAttribute("fill") === "rgb(17,17,17" ||
-                      path.getAttribute("fill") === "rgb(176,195,255)" ||
-                      path.getAttribute("stroke") === "rgb(17,17,17);" 
+                      path.getAttribute("fill") === "url(#__lottie_element_35)" ||
+                      path.getAttribute("stroke") === "rgb(176,195,255)" ||
+                      path.getAttribute("stroke") === "rgb(54,88,193)"
+
                     ) {
                       path.setAttribute("fill", "#e74d61");
                       path.setAttribute("stroke", "#e74d61");
@@ -361,7 +361,7 @@
             
           </div>
           <div class="row">
-            <div class="col-12 col-md-6 mt-4 px-3">
+            <div class="col-12 col-md-6 mt-4">
             <div class="card-services card-hover pt-3 hvr-glow">
               <div class="d-flex justify-content-center">
 
@@ -374,13 +374,12 @@
                 <img
                   src="pics/data management-icon-hover.svg"
                   class=" text-center svg-hover"
-                  style="transform: scale(1.1)"
                   alt="Reporting icon"
                 />
               </div>
               <div class="card-content">
                 <h5 class="card-title text-center py-3">Data Management</h5>
-                <div class="card-text">
+                <div class="card-text pe-3">
                   <ul style="list-style-type: disc">
                     <li>
                       Database architecture: dimensional models and schema
@@ -396,7 +395,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 mt-4 px-3">
+          <div class="col-12 col-md-6 mt-4">
             <div class="card-services card-hover pt-3 hvr-glow">
               <div class="d-flex justify-content-center">
                 <img
@@ -408,7 +407,6 @@
                 <img
                   src="pics/analytics-icon-hover.svg"
                   class=" text-center svg-hover"
-                  style="transform: scale(1.1)"
                   alt="Reporting icon"
                 />
               </div>
@@ -416,7 +414,7 @@
                 <h5 class="card-title text-center py-3">
                   Analysis and Interpretation
                 </h5>
-                <div class="card-text">
+                <div class="card-text pe-3">
                   <ul style="list-style-type: disc">
                     <li>Data exploration and descriptive analytics.</li>
                     <li>Statistical analysis.</li>
