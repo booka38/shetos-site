@@ -133,6 +133,11 @@ nav .navbar-nav li a:hover {
   background-position: center, 0% 0%, center;
   background-repeat: no-repeat, repeat, repeat-y;
 }
+@media (max-width: 768px) {
+  #header-bg {
+    background-image: url(/pics/header-bg.webp);
+  }
+}
 
 /*  start header*/
 
@@ -370,7 +375,7 @@ header .arrow-down:hover {
 
 @media (min-width: 991.9px) {
   .about-me .bg-holder {
-    padding-bottom: 7rem;
+    padding-bottom: 9rem;
   }
   .about-me .bio {
     position: absolute;
@@ -496,12 +501,12 @@ header .arrow-down:hover {
     conic-gradient(from 270deg at 20% 50%, rgb(0, 2, 18), rgb(31, 49, 64));
 }
 .light-red::before {
-  background-image: conic-gradient(from 90deg at 40% 50%, #e74d61, #000212),
-    conic-gradient(from 270deg at 60% 50%, #000212, #e74d61);
+  background-image: conic-gradient(from 90deg at 50% 50%, #e74d61, #000212),
+    conic-gradient(from 270deg at 50% 50%, #000212, #e74d61);
 }
 .light-green::before {
-  background-image: conic-gradient(from 90deg at 40% 50%, #5683aa, #000212),
-    conic-gradient(from 270deg at 60% 50%, #000212, #5683aa);
+  background-image: conic-gradient(from 90deg at 50% 50%, #5683aa, #000212),
+    conic-gradient(from 270deg at 50% 50%, #000212, #5683aa);
 }
 .scroll-in-view::before {
   opacity: 1;
@@ -511,21 +516,30 @@ header .arrow-down:hover {
   display: block;
   height: 100%;
   position: relative;
-  background: radial-gradient(
-    at center center,
-    rgba(194, 97, 254, 0.15),
-    rgba(255, 255, 255, 0)
-  );
+
   border-style: solid;
   border-width: 1px;
   border-image: linear-gradient(
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0)
-    )
-    1;
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  )
+  1;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
 }
+#services .card-top{
+  background: radial-gradient(
+    at center center,
+    #2e1316,
+    rgba(255, 255, 255, 0)
+  );
+  }
+#services .card-bottom{
+  background: radial-gradient(
+    at center center,
+    #161635,
+    rgba(255, 255, 255, 0)
+  );}
 #services .svg,
 #services .svg-hover {
   max-width: 90px;
@@ -538,12 +552,17 @@ header .arrow-down:hover {
   box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 0.82);
 }
 #services #dashboard-animation {
-  max-width: 295px;
+  max-width: 100%;
   position: relative;
-  left: 50%;
+  left: 47%;
   margin-bottom: -97px;
   top: 50%;
-  transform: translate(-52%, -58%) !important;
+  transform: translate(-53%, -60%) scale(1.4) !important;
+}
+@media (min-width: 991.9px) {
+  #services .container {
+    padding: 0 8rem;
+  }
 }
 @media (max-width: 767px) {
   #services .col {
@@ -553,6 +572,8 @@ header .arrow-down:hover {
   #services #dashboard-animation {
     max-width: 190px !important;
     margin-bottom: -46px;
+    transform: translate(-42%, -60%) scale(1) !important;
+
   }
   #services .svg,
   #services .svg-hover {
