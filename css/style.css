@@ -8,13 +8,14 @@ body {
 #portfolio h2,
 #portfolio .btns,
 .project-header {
-  font-family: "trebuchet ms", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   color: rgb(247, 248, 248) !important;
+  font-weight:300;
 }
 
 #services h2,
 #portfolio h2 {
-  font-size: 60px;
+  font-size: 90px;
 }
 @media (max-width: 575px) {
   #services h2,
