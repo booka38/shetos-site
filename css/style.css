@@ -10,12 +10,12 @@ body {
 .project-header {
   font-family: "Roboto", sans-serif !important;
   color: rgb(247, 248, 248) !important;
-  font-weight:300;
+  font-weight:450;
 }
 
 #services h2,
 #portfolio h2 {
-  font-size: 90px;
+  font-size: 75px;
 }
 @media (max-width: 575px) {
   #services h2,
@@ -517,7 +517,11 @@ header .arrow-down:hover {
   display: block;
   height: 100%;
   position: relative;
-
+  background: radial-gradient(
+    at center center,
+    #2e1316,
+    rgba(255, 255, 255, 0)
+  );
   border-style: solid;
   border-width: 1px;
   border-image: linear-gradient(
@@ -528,19 +532,7 @@ header .arrow-down:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
 }
-#services .card-top{
-  background: radial-gradient(
-    at center center,
-    #2e1316,
-    rgba(255, 255, 255, 0)
-  );
-  }
-#services .card-bottom{
-  background: radial-gradient(
-    at center center,
-    #161635,
-    rgba(255, 255, 255, 0)
-  );}
+
 #services .svg,
 #services .svg-hover {
   max-width: 90px;
@@ -558,7 +550,7 @@ header .arrow-down:hover {
   left: 47%;
   margin-bottom: -97px;
   top: 50%;
-  transform: translate(-53%, -60%) scale(1.4) !important;
+  transform: translate(-53%, -53%) scale(1.4) !important;
 }
 @media (min-width: 991.9px) {
   #services .container {
@@ -575,6 +567,9 @@ header .arrow-down:hover {
     margin-bottom: -46px;
     transform: translate(-42%, -60%) scale(1) !important;
 
+  }
+  #services .card-text ul{
+    line-height: 2 !important;
   }
   #services .svg,
   #services .svg-hover {
