@@ -8,7 +8,7 @@ body {
 #portfolio h2,
 #portfolio .btns,
 .project-header {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Bai Jamjuree", sans-serif !important;
   color: rgb(247, 248, 248) !important;
   font-weight:300;
 }
@@ -147,7 +147,6 @@ header {
   color: black;
   position: relative;
   overflow: hidden;
-  font-family: "Bai Jamjuree", "sans-serif";
 }
 
 header .title img {
