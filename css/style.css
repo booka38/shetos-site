@@ -165,16 +165,15 @@ header .text-holder {
 header .h2 {
   color: white;
   letter-spacing: 0.4rem;
-  width: calc(100% + 0.4rem);
   font-size: 1.375em;
   line-height: 1.875;
   font-weight: 400;
+  margin-left: -5px;
 }
 
 header p {
   color: white;
   letter-spacing: 1.15rem;
-  width: calc(100% + 1.15rem);
   font-size: 4.375em;
   line-height: 1.125;
   font-weight: 400;
