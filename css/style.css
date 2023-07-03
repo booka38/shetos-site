@@ -168,7 +168,8 @@ header .h2 {
   font-size: 1.375em;
   line-height: 1.875;
   font-weight: 400;
-  margin-left: -5px;
+  max-width: fit-content;
+  margin: auto;
 }
 
 header p {
