@@ -39,9 +39,7 @@ a {
   color: inherit;
 }
 
-h2 {
-  font-weight: 700 !important;
-}
+
 .btn:focus {
   outline: 0;
   box-shadow: none;
@@ -822,7 +820,7 @@ header .arrow-down:hover {
   font-family: "poppins", sans-serif;
   font-size: 90px;
   color: rgb(247, 248, 248) !important;
-  font-weight: 500 !important;
+  font-weight: 300 !important;
 }
 
 .contact .row-padding {
