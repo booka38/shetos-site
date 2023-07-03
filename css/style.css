@@ -1,8 +1,9 @@
 /*  general styles */
 
 body {
-  font-family: "Poppins", "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
+header .header-text,
 .about-me h2,
 #services h2,
 #portfolio h2,
