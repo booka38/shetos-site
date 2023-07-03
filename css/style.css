@@ -147,7 +147,7 @@ header {
   color: black;
   position: relative;
   overflow: hidden;
-  font-family:  "sans-serif";
+  font-family: "Bai Jamjuree", "sans-serif";
 }
 
 header .title img {
@@ -168,8 +168,6 @@ header .h2 {
   font-size: 1.375em;
   line-height: 1.875;
   font-weight: 400;
-  max-width: fit-content;
-  margin: auto;
 }
 
 header p {
@@ -1119,8 +1117,8 @@ body.light.contact .contactform textarea:focus,
   header .text-holder {
     padding: 0;
   }
-  header .text-holder p:nth-child(2) {
-    font-size: 25px;
+  header .header-text{
+    font-size: 13px;
   }
   .hire-me,
   .show-cv {
