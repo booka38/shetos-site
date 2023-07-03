@@ -147,6 +147,7 @@ header {
   color: black;
   position: relative;
   overflow: hidden;
+  font-family: "Bai Jamjuree", "sans-serif";
 }
 
 header .title img {
