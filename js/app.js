@@ -139,7 +139,7 @@ const buttons = document.querySelectorAll("#portfolio .btns button");
 
 // Add hover event listener to each button
 buttons.forEach((button) => {
-  button.addEventListener("mouseover", () => {
+  button.addEventListener("click", () => {
     const hoverBtnBg = document.querySelector("#portfolio .btns .hover-btn-bg");
     const width = button.dataset.width;
     const transform = button.dataset.transform;
@@ -149,18 +149,10 @@ buttons.forEach((button) => {
   });
 });
 
-// Add mouseout event listener to each button
-//if the button is not active set color to black
-buttons.forEach((button) => {
-  button.addEventListener("mouseout", () => {
-    if (!button.classList.contains("active-btn")) {
-      button.style.color = "black";
-    }
-  });
-});
+
 // Add click event listener to each button
 buttons.forEach((button) => {
-  button.addEventListener("mouseover", () => {
+  button.addEventListener("click", () => {
     // Remove active class from all buttons
     buttons.forEach((btn) => btn.classList.remove("active-btn"));
     // Add active class to the clicked button

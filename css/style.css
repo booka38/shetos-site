@@ -10,7 +10,7 @@ body {
 .project-header {
   font-family: "Roboto", sans-serif !important;
   color: rgb(247, 248, 248) !important;
-  font-weight:450;
+  font-weight:300;
 }
 
 #services h2,
@@ -147,7 +147,6 @@ header {
   color: black;
   position: relative;
   overflow: hidden;
-  font-family: "Bai Jamjuree", "sans-serif";
 }
 
 header .title img {
@@ -550,12 +549,19 @@ header .arrow-down:hover {
   left: 47%;
   margin-bottom: -97px;
   top: 50%;
-  transform: translate(-53%, -53%) scale(1.4) !important;
+  transform: translate(-53%, -57%) scale(1.4) !important;
 }
 @media (min-width: 991.9px) {
   #services .container {
     padding: 0 8rem;
   }
+}
+@media (min-width: 767.9px) {
+  #services .card-top .card-title {
+    font-size: 1.5rem;}
+#services .card-top .card-text ul{
+  font-size: 1.2rem;
+}
 }
 @media (max-width: 767px) {
   #services .col {
@@ -568,9 +574,7 @@ header .arrow-down:hover {
     transform: translate(-42%, -60%) scale(1) !important;
 
   }
-  #services .card-text ul{
-    line-height: 2 !important;
-  }
+
   #services .svg,
   #services .svg-hover {
     max-width: 70px;
