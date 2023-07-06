@@ -260,7 +260,7 @@ fetch('/pics/logos/DBT.svg')
     // Process the SVG data
     const parser = new DOMParser();
     const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','dbt');
+    svgElement.classList.add('img-fluid','px-3','dbt');
     
     // Display the SVG in the HTML container
     const container = document.querySelector('.dbt-holder div');
@@ -277,7 +277,7 @@ fetch('/pics/logos/GA4.svg')
   // Process the SVG data
   const parser = new DOMParser();
   const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','google-analytics');
+  svgElement.classList.add('img-fluid','px-3','google-analytics');
   
   // Display the SVG in the HTML container
   const container = document.querySelector('.google-analytics-holder div');
@@ -294,7 +294,7 @@ fetch('/pics/logos/google-big-query.svg')
     // Process the SVG data
     const parser = new DOMParser();
     const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','google-query');
+    svgElement.classList.add('img-fluid','px-3','google-query');
     
     // Display the SVG in the HTML container
     const container = document.querySelector('.google-query-holder div');
@@ -311,7 +311,7 @@ fetch('/pics/logos/Informatica.svg')
   // Process the SVG data
   const parser = new DOMParser();
   const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','informatica');
+  svgElement.classList.add('img-fluid','px-3','informatica');
   
   // Display the SVG in the HTML container
   const container = document.querySelector('.informatica-holder div');
@@ -328,7 +328,7 @@ fetch('/pics/logos/microsoft-sql-server.svg')
     // Process the SVG data
     const parser = new DOMParser();
     const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','microsoft-sql');
+    svgElement.classList.add('img-fluid','px-3','microsoft-sql');
     
     // Display the SVG in the HTML container
     const container = document.querySelector('.microsoft-sql-holder div');
@@ -345,7 +345,7 @@ fetch('/pics/logos/python.svg')
   // Process the SVG data
   const parser = new DOMParser();
   const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','python');
+  svgElement.classList.add('img-fluid','px-3','python');
   
   // Display the SVG in the HTML container
   const container = document.querySelector('.python-holder div');
@@ -362,7 +362,7 @@ fetch('/pics/logos/Snowflake.svg')
     // Process the SVG data
     const parser = new DOMParser();
     const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','snowflake');
+    svgElement.classList.add('img-fluid','px-3','snowflake');
     
     // Display the SVG in the HTML container
     const container = document.querySelector('.snowflake-holder div');
@@ -379,7 +379,7 @@ fetch('/pics/logos/tableau.svg')
   // Process the SVG data
   const parser = new DOMParser();
   const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','tableau');
+  svgElement.classList.add('img-fluid','px-3','tableau');
   
   // Display the SVG in the HTML container
   const container = document.querySelector('.tableau-holder  div');
