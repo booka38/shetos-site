@@ -693,7 +693,17 @@ fill: #FF694A !important;
 .tableau-holder:hover .eleven{
   fill: #485177 !important;
 }
-
+@media(max-width:767.9px){
+  .dbt-holder,
+  .google-analytics-holder,
+  .microsoft-sql-holder,
+  .python-holder{
+    border-bottom: 1px solid white;
+  }
+  .tools svg{
+    width: 100px;
+  }
+}
 /* end tools */
 
 /* start portfolio */

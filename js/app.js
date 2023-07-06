@@ -263,7 +263,7 @@ fetch('/pics/logos/DBT.svg')
     svgElement.classList.add('img-fluid','dbt');
     
     // Display the SVG in the HTML container
-    const container = document.querySelector('.dbt-holder');
+    const container = document.querySelector('.dbt-holder div');
     container.appendChild(svgElement);
   })
   .catch(error => {
@@ -280,7 +280,7 @@ fetch('/pics/logos/GA4.svg')
   svgElement.classList.add('img-fluid','google-analytics');
   
   // Display the SVG in the HTML container
-  const container = document.querySelector('.google-analytics-holder');
+  const container = document.querySelector('.google-analytics-holder div');
   container.appendChild(svgElement);
 })
 .catch(error => {
@@ -297,7 +297,7 @@ fetch('/pics/logos/google-big-query.svg')
     svgElement.classList.add('img-fluid','google-query');
     
     // Display the SVG in the HTML container
-    const container = document.querySelector('.google-query-holder');
+    const container = document.querySelector('.google-query-holder div');
     container.appendChild(svgElement);
   })
   .catch(error => {
@@ -314,7 +314,7 @@ fetch('/pics/logos/informatica.svg')
   svgElement.classList.add('img-fluid','informatica');
   
   // Display the SVG in the HTML container
-  const container = document.querySelector('.informatica-holder');
+  const container = document.querySelector('.informatica-holder div');
   container.appendChild(svgElement);
 })
 .catch(error => {
@@ -331,7 +331,7 @@ fetch('/pics/logos/microsoft-sql-server.svg')
     svgElement.classList.add('img-fluid','microsoft-sql');
     
     // Display the SVG in the HTML container
-    const container = document.querySelector('.microsoft-sql-holder');
+    const container = document.querySelector('.microsoft-sql-holder div');
     container.appendChild(svgElement);
   })
   .catch(error => {
@@ -348,7 +348,7 @@ fetch('/pics/logos/python.svg')
   svgElement.classList.add('img-fluid','python');
   
   // Display the SVG in the HTML container
-  const container = document.querySelector('.python-holder');
+  const container = document.querySelector('.python-holder div');
   container.appendChild(svgElement);
 })
 .catch(error => {
@@ -365,7 +365,7 @@ fetch('/pics/logos/snowflake.svg')
     svgElement.classList.add('img-fluid','snowflake');
     
     // Display the SVG in the HTML container
-    const container = document.querySelector('.snowflake-holder');
+    const container = document.querySelector('.snowflake-holder div');
     container.appendChild(svgElement);
   })
   .catch(error => {
@@ -382,7 +382,7 @@ fetch('/pics/logos/tableau.svg')
   svgElement.classList.add('img-fluid','tableau');
   
   // Display the SVG in the HTML container
-  const container = document.querySelector('.tableau-holder');
+  const container = document.querySelector('.tableau-holder  div');
   container.appendChild(svgElement);
 })
 .catch(error => {
