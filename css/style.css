@@ -602,6 +602,10 @@ header .arrow-down:hover {
 .tools .informatica{
   scale: 2.2;
 }
+.tools .snowflake-holder,
+.informatica-holder{
+  overflow: hidden;
+}
 .tools .snowflake{
   scale: 2.5;
 }

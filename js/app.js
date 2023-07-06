@@ -253,140 +253,27 @@ window.addEventListener("scroll", function () {
   handleScrollInView("contact"); // Add scroll behavior for #contact section
 });
 
-// Fetch the SVG file
-fetch('/pics/logos/DBT.svg')
-  .then(response => response.text())
-  .then(svgData => {
-    // Process the SVG data
-    const parser = new DOMParser();
-    const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','px-3','dbt');
-    
-    // Display the SVG in the HTML container
-    const container = document.querySelector('.dbt-holder div');
-    container.appendChild(svgElement);
-  })
-  .catch(error => {
-    console.error('Error loading SVG file:', error);
-  });
-  
-  // Fetch the SVG file
-fetch('/pics/logos/GA4.svg')
-.then(response => response.text())
-.then(svgData => {
-  // Process the SVG data
-  const parser = new DOMParser();
-  const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','px-3','google-analytics');
-  
-  // Display the SVG in the HTML container
-  const container = document.querySelector('.google-analytics-holder div');
-  container.appendChild(svgElement);
-})
-.catch(error => {
-  console.error('Error loading SVG file:', error);
-});
+function loadSvgFile(url, className, containerSelector) {
+  fetch(url)
+    .then(response => response.text())
+    .then(svgData => {
+      const parser = new DOMParser();
+      const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
+      svgElement.classList.add('img-fluid', 'px-3', className);
 
-// Fetch the SVG file
-fetch('/pics/logos/google-big-query.svg')
-  .then(response => response.text())
-  .then(svgData => {
-    // Process the SVG data
-    const parser = new DOMParser();
-    const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','px-3','google-query');
-    
-    // Display the SVG in the HTML container
-    const container = document.querySelector('.google-query-holder div');
-    container.appendChild(svgElement);
-  })
-  .catch(error => {
-    console.error('Error loading SVG file:', error);
-  });
+      const container = document.querySelector(containerSelector);
+      container.appendChild(svgElement);
+    })
+    .catch(error => {
+      console.error('Error loading SVG file:', error);
+    });
+}
 
-  // Fetch the SVG file
-fetch('/pics/logos/Informatica.svg')
-.then(response => response.text())
-.then(svgData => {
-  // Process the SVG data
-  const parser = new DOMParser();
-  const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','px-3','informatica');
-  
-  // Display the SVG in the HTML container
-  const container = document.querySelector('.informatica-holder div');
-  container.appendChild(svgElement);
-})
-.catch(error => {
-  console.error('Error loading SVG file:', error);
-});
-
-// Fetch the SVG file
-fetch('/pics/logos/microsoft-sql-server.svg')
-  .then(response => response.text())
-  .then(svgData => {
-    // Process the SVG data
-    const parser = new DOMParser();
-    const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','px-3','microsoft-sql');
-    
-    // Display the SVG in the HTML container
-    const container = document.querySelector('.microsoft-sql-holder div');
-    container.appendChild(svgElement);
-  })
-  .catch(error => {
-    console.error('Error loading SVG file:', error);
-  });
-
-  // Fetch the SVG file
-fetch('/pics/logos/python.svg')
-.then(response => response.text())
-.then(svgData => {
-  // Process the SVG data
-  const parser = new DOMParser();
-  const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','px-3','python');
-  
-  // Display the SVG in the HTML container
-  const container = document.querySelector('.python-holder div');
-  container.appendChild(svgElement);
-})
-.catch(error => {
-  console.error('Error loading SVG file:', error);
-});
-
-// Fetch the SVG file
-fetch('/pics/logos/Snowflake.svg')
-  .then(response => response.text())
-  .then(svgData => {
-    // Process the SVG data
-    const parser = new DOMParser();
-    const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-    svgElement.classList.add('img-fluid','px-3','snowflake');
-    
-    // Display the SVG in the HTML container
-    const container = document.querySelector('.snowflake-holder div');
-    container.appendChild(svgElement);
-  })
-  .catch(error => {
-    console.error('Error loading SVG file:', error);
-  });
-
-  // Fetch the SVG file
-fetch('/pics/logos/tableau.svg')
-.then(response => response.text())
-.then(svgData => {
-  // Process the SVG data
-  const parser = new DOMParser();
-  const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-  svgElement.classList.add('img-fluid','px-3','tableau');
-  
-  // Display the SVG in the HTML container
-  const container = document.querySelector('.tableau-holder  div');
-  container.appendChild(svgElement);
-})
-.catch(error => {
-  console.error('Error loading SVG file:', error);
-});
-
-
+loadSvgFile('/pics/logos/DBT.svg', 'dbt', '.dbt-holder div');
+loadSvgFile('/pics/logos/GA4.svg', 'google-analytics', '.google-analytics-holder div');
+loadSvgFile('/pics/logos/google-big-query.svg', 'google-query', '.google-query-holder div');
+loadSvgFile('/pics/logos/Informatica.svg', 'informatica', '.informatica-holder div');
+loadSvgFile('/pics/logos/microsoft-sql-server.svg', 'microsoft-sql', '.microsoft-sql-holder div');
+loadSvgFile('/pics/logos/python.svg', 'python', '.python-holder div');
+loadSvgFile('/pics/logos/Snowflake.svg', 'snowflake', '.snowflake-holder div');
+loadSvgFile('/pics/logos/tableau.svg', 'tableau', '.tableau-holder div');
