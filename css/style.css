@@ -146,6 +146,7 @@ header {
   color: black;
   position: relative;
   overflow: hidden;
+  font-family: 'Bai Jamjuree', sans-serif !important;
 }
 
 header .title img {
@@ -432,7 +433,7 @@ header .arrow-down:hover {
 /*  start services*/
 
 #services {
-  background: linear-gradient(to bottom, #130000 32%, #0b1423 113%);
+  background: #130000;
   color: white;
 }
 .light {
@@ -585,6 +586,115 @@ header .arrow-down:hover {
 }
 
 /*  end services*/
+/* start tools */
+.tools{
+  background:#130000;
+}
+.tools svg{
+  width: 150px;
+}
+.tools .dbt{
+  scale:.8;
+}
+.tools .google-analytics{
+  scale: 1.2;
+}
+.tools .informatica{
+  scale: 2.2;
+}
+.tools .snowflake{
+  scale: 2.5;
+}
+.tools svg path,
+.tools svg polygon
+{
+  fill: #b5b5b5 !important;
+  transition: all .2s ease-in-out;
+}
+.tools .google-query #path24,
+.tools .google-query #path26,
+.tools .google-query #path28,
+.tools .google-query #path30,
+.tools .google-query #path32,
+.tools .google-query #path34,
+.tools .google-query #path36{
+  fill: white !important;
+} 
+.dbt-holder:hover #one {
+fill: #262A38 !important;
+}
+.dbt-holder:hover #two {
+fill: #FF694A !important;
+}
+.google-analytics-holder:hover  .st0{
+  fill: #75787d !important;
+}
+.google-analytics-holder:hover  .st1{
+  fill: #5CA1D5 !important;
+}
+.google-analytics-holder:hover  .st2{
+  fill: #FEE875 !important;
+}
+.google-query-holder:hover #path20{
+  fill: #4386fa !important;
+}
+.google-query-holder:hover path
+{
+  fill: #59585b !important;
+}
+.informatica-holder:hover path{
+  fill: #656565 !important;
+}
+.informatica-holder:hover .st1{
+  fill: #579ACD !important;
+}
+.informatica-holder:hover .st2{
+  fill: #FEE975 !important;
+}
+.microsoft-sql-holder:hover .one,
+.microsoft-sql-holder:hover .two,
+.microsoft-sql-holder:hover .four
+  {
+  fill: white !important;
+}
+.microsoft-sql-holder:hover .three{
+  fill: #a22226 !important;
+}
+.python-holder:hover .st0{
+  fill: #656565 !important;
+}
+.python-holder:hover .st1{
+  fill: #2a587f !important;
+}
+.python-holder:hover .st2{
+  fill: #bca649 !important;
+}
+.snowflake-holder:hover path{
+  fill: #29b5e8 !important;
+}
+.tableau-holder:hover .one,
+.tableau-holder:hover .three,
+.tableau-holder:hover .seven{
+  fill: #496f81 !important;
+}
+.tableau-holder:hover .two,
+.tableau-holder:hover .five{
+  fill: #b15d2d !important;
+}
+.tableau-holder:hover .four,
+.tableau-holder:hover .eight,
+.tableau-holder:hover .ten{
+  fill: #1a3b6b !important;
+}
+.tableau-holder:hover .nine{
+  fill: #951c30 !important;
+}
+.tableau-holder:hover .six,
+.tableau-holder:hover .eleven{
+  fill: #485177 !important;
+}
+
+/* end tools */
 
 /* start portfolio */
 
