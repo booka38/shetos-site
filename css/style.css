@@ -433,7 +433,7 @@ header .arrow-down:hover {
 /*  start services*/
 
 #services {
-  background: #130000;
+  background: linear-gradient(to bottom, #130000 54%, #0b1423 98%);
   color: white;
 }
 .light {
@@ -588,7 +588,7 @@ header .arrow-down:hover {
 /*  end services*/
 /* start tools */
 .tools{
-  background:#130000;
+  background:#0b1423;
 }
 .tools svg{
   width: 150px;
@@ -722,7 +722,7 @@ fill: #FF694A !important;
 /* start portfolio */
 
 #portfolio {
-  background: linear-gradient(to top, #130000 32%, #0b1423 113%);
+  background: linear-gradient(to top, #130000 0%, #0b1423 17%)
 }
 #portfolio .project {
   background-image: radial-gradient(
