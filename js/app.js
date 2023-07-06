@@ -305,7 +305,7 @@ fetch('/pics/logos/google-big-query.svg')
   });
 
   // Fetch the SVG file
-fetch('/pics/logos/informatica.svg')
+fetch('/pics/logos/Informatica.svg')
 .then(response => response.text())
 .then(svgData => {
   // Process the SVG data
@@ -356,7 +356,7 @@ fetch('/pics/logos/python.svg')
 });
 
 // Fetch the SVG file
-fetch('/pics/logos/snowflake.svg')
+fetch('/pics/logos/Snowflake.svg')
   .then(response => response.text())
   .then(svgData => {
     // Process the SVG data
