@@ -11,7 +11,7 @@ header .header-text,
 .project-header {
   font-family: "Bai Jamjuree", sans-serif !important;
   color: rgb(247, 248, 248) !important;
-  font-weight:400;
+  font-weight: 400;
 }
 
 #services h2,
@@ -38,7 +38,6 @@ a:hover {
 a {
   color: inherit;
 }
-
 
 .btn:focus {
   outline: 0;
@@ -146,7 +145,7 @@ header {
   color: black;
   position: relative;
   overflow: hidden;
-  font-family: 'Bai Jamjuree', sans-serif !important;
+  font-family: "Bai Jamjuree", sans-serif !important;
 }
 
 header .title img {
@@ -216,8 +215,8 @@ header .arrow-down:hover {
   padding-bottom: 3rem;
   box-shadow: 0px 0px 14px -1px rgba(255, 255, 255, 0.82);
 }
-.about-me h2{
-  font-weight: 500!important;
+.about-me h2 {
+  font-weight: 500 !important;
 }
 
 .about-me-img-holder {
@@ -442,6 +441,7 @@ header .arrow-down:hover {
   margin-bottom: -220px;
   margin-top: -200px;
   user-select: none;
+  mask-image: radial-gradient(100% 50% at center center, black, transparent);
   -webkit-mask-image: radial-gradient(
     100% 50% at center center,
     black,
@@ -469,6 +469,7 @@ header .arrow-down:hover {
   margin-bottom: -220px;
   margin-top: -200px;
   user-select: none;
+  mask-image: radial-gradient(100% 50% at center center, black, transparent);
   -webkit-mask-image: radial-gradient(
     100% 50% at center center,
     black,
@@ -523,10 +524,10 @@ header .arrow-down:hover {
   border-style: solid;
   border-width: 1px;
   border-image: linear-gradient(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  )
-  1;
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    )
+    1;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
 }
@@ -557,10 +558,11 @@ header .arrow-down:hover {
 }
 @media (min-width: 767.9px) {
   #services .card-top .card-title {
-    font-size: 1.5rem;}
-#services .card-top .card-text ul{
-  font-size: 1.2rem;
-}
+    font-size: 1.5rem;
+  }
+  #services .card-top .card-text ul {
+    font-size: 1.2rem;
+  }
 }
 @media (max-width: 767px) {
   #services .col {
@@ -571,7 +573,6 @@ header .arrow-down:hover {
     max-width: 190px !important;
     margin-bottom: -46px;
     transform: translate(-42%, -60%) scale(1) !important;
-
   }
 
   #services .svg,
@@ -587,33 +588,32 @@ header .arrow-down:hover {
 
 /*  end services*/
 /* start tools */
-.tools{
-  background:#0b1423;
+.tools {
+  background: #0b1423;
 }
-.tools svg{
+.tools svg {
   width: 150px;
 }
-.tools .dbt{
-  scale:.8;
+.tools .dbt {
+  scale: 0.8;
 }
-.tools .google-analytics{
+.tools .google-analytics {
   scale: 1.2;
 }
-.tools .informatica{
+.tools .informatica {
   scale: 2.2;
 }
 .tools .snowflake-holder,
-.informatica-holder{
+.informatica-holder {
   overflow: hidden;
 }
-.tools .snowflake{
+.tools .snowflake {
   scale: 2.5;
 }
 .tools svg path,
-.tools svg polygon
-{
+.tools svg polygon {
   fill: #b5b5b5 !important;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .tools .google-query #path24,
 .tools .google-query #path26,
@@ -621,80 +621,78 @@ header .arrow-down:hover {
 .tools .google-query #path30,
 .tools .google-query #path32,
 .tools .google-query #path34,
-.tools .google-query #path36{
+.tools .google-query #path36 {
   fill: white !important;
-} 
+}
 .dbt-holder:hover #one {
-fill: #262A38 !important;
+  fill: #262a38 !important;
 }
 .dbt-holder:hover #two {
-fill: #FF694A !important;
+  fill: #ff694a !important;
 }
-.google-analytics-holder:hover  .st0{
+.google-analytics-holder:hover .st0 {
   fill: #75787d !important;
 }
-.google-analytics-holder:hover  .st1{
-  fill: #5CA1D5 !important;
+.google-analytics-holder:hover .st1 {
+  fill: #5ca1d5 !important;
 }
-.google-analytics-holder:hover  .st2{
-  fill: #FEE875 !important;
+.google-analytics-holder:hover .st2 {
+  fill: #fee875 !important;
 }
-.google-query-holder:hover #path20{
+.google-query-holder:hover #path20 {
   fill: #4386fa !important;
 }
-.google-query-holder:hover path
-{
+.google-query-holder:hover path {
   fill: #59585b !important;
 }
-.informatica-holder:hover path{
+.informatica-holder:hover path {
   fill: #656565 !important;
 }
-.informatica-holder:hover .st1{
-  fill: #579ACD !important;
+.informatica-holder:hover .st1 {
+  fill: #579acd !important;
 }
-.informatica-holder:hover .st2{
-  fill: #FEE975 !important;
+.informatica-holder:hover .st2 {
+  fill: #fee975 !important;
 }
 .microsoft-sql-holder:hover .one,
 .microsoft-sql-holder:hover .two,
-.microsoft-sql-holder:hover .four
-  {
+.microsoft-sql-holder:hover .four {
   fill: white !important;
 }
-.microsoft-sql-holder:hover .three{
+.microsoft-sql-holder:hover .three {
   fill: #a22226 !important;
 }
-.python-holder:hover .st0{
+.python-holder:hover .st0 {
   fill: #656565 !important;
 }
-.python-holder:hover .st1{
+.python-holder:hover .st1 {
   fill: #2a587f !important;
 }
-.python-holder:hover .st2{
+.python-holder:hover .st2 {
   fill: #bca649 !important;
 }
-.snowflake-holder:hover path{
+.snowflake-holder:hover path {
   fill: #29b5e8 !important;
 }
 .tableau-holder:hover .one,
 .tableau-holder:hover .three,
-.tableau-holder:hover .seven{
+.tableau-holder:hover .seven {
   fill: #496f81 !important;
 }
 .tableau-holder:hover .two,
-.tableau-holder:hover .five{
+.tableau-holder:hover .five {
   fill: #b15d2d !important;
 }
 .tableau-holder:hover .four,
 .tableau-holder:hover .eight,
-.tableau-holder:hover .ten{
+.tableau-holder:hover .ten {
   fill: #1a3b6b !important;
 }
-.tableau-holder:hover .nine{
+.tableau-holder:hover .nine {
   fill: #951c30 !important;
 }
 .tableau-holder:hover .six,
-.tableau-holder:hover .eleven{
+.tableau-holder:hover .eleven {
   fill: #485177 !important;
 }
 @media (min-width: 991.9px) {
@@ -702,19 +700,19 @@ fill: #FF694A !important;
     padding: 0 8rem !important;
   }
 }
-@media(max-width:767.9px){
+@media (max-width: 767.9px) {
   .dbt-holder,
   .google-analytics-holder,
   .microsoft-sql-holder,
-  .python-holder{
+  .python-holder {
     border-bottom: 1px solid white;
   }
-  .tools svg{
+  .tools svg {
     width: 100px;
   }
   .google-analytics-holder,
-  .python-holder{
-    border-right:none !important ;
+  .python-holder {
+    border-right: none !important ;
   }
 }
 /* end tools */
@@ -722,7 +720,7 @@ fill: #FF694A !important;
 /* start portfolio */
 
 #portfolio {
-  background: linear-gradient(to top, #130000 0%, #0b1423 17%)
+  background: linear-gradient(to top, #130000 0%, #0b1423 17%);
 }
 #portfolio .project {
   background-image: radial-gradient(
@@ -1251,7 +1249,7 @@ body.light.contact .contactform textarea:focus,
   header .text-holder {
     padding: 0;
   }
-  header .header-text{
+  header .header-text {
     font-size: 13px;
   }
   .hire-me,
@@ -1262,7 +1260,7 @@ body.light.contact .contactform textarea:focus,
   .about-me-btn-holder {
     display: block !important;
   }
-  .contact .container{
+  .contact .container {
     padding: 1rem !important;
   }
   .contact .title-bg span {

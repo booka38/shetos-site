@@ -19,6 +19,8 @@
   "dependencies": {
     "googleapis": "^118.0.0",
     "hover.css": "^2.3.2",
-    "nodemailer": "^6.9.3"
-  }
+    "nodemailer": "^6.9.3",
+    "prettier": "^3.0.0"
+  },
+  "devDependencies": {}
 }
