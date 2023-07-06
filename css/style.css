@@ -699,7 +699,7 @@ fill: #FF694A !important;
 }
 @media (min-width: 991.9px) {
   .tools .container {
-    padding: 0 8rem;
+    padding: 0 8rem !important;
   }
 }
 @media(max-width:767.9px){
@@ -1262,9 +1262,12 @@ body.light.contact .contactform textarea:focus,
   .about-me-btn-holder {
     display: block !important;
   }
+  .contact .container{
+    padding: 1rem !important;
+  }
   .contact .title-bg span {
     font-size: 44px;
-    line-height: 7.38;
+    line-height: 7.3;
   }
   .contact h2 {
     font-size: 26.5px;
@@ -1274,6 +1277,7 @@ body.light.contact .contactform textarea:focus,
     font-size: 15px;
   }
 }
+
 /* BACK TOP BUTTON */
 .back-top {
   display: flex;
