@@ -55,7 +55,10 @@ nav {
     linear-gradient(45deg, rgb(255 255 255 / 0%) 22%, rgb(196 123 82 / 0%) 100%),
     url(/pics/nav-bg.webp);
   background-size: cover, cover;
-  background-position: center, 0% 0%, center;
+  background-position:
+    center,
+    0% 0%,
+    center;
   background-repeat: no-repeat, repeat, repeat-y;
   transition: opacity 0.3s ease;
 }
@@ -129,7 +132,10 @@ nav .navbar-nav li a:hover {
     linear-gradient(45deg, rgb(255 255 255 / 0%) 22%, rgb(196 123 82 / 0%) 100%),
     url(/pics/header-bg.webp);
   background-size: cover, cover;
-  background-position: center, 0% 0%, center;
+  background-position:
+    center,
+    0% 0%,
+    center;
   background-repeat: no-repeat, repeat, repeat-y;
 }
 @media (max-width: 768px) {
@@ -205,12 +211,12 @@ header .arrow-down:hover {
 /*  start about-me*/
 
 .about-me {
-  background: linear-gradient(to top, #130000 10%, #111111 90%);
+  background: #130000;
   color: white;
 }
 
 .about-me .bg-holder {
-  background-color: #111111;
+  background-image: radial-gradient(at center center, #f4000026, #ffffff00);
   border-radius: 15px;
   padding-bottom: 3rem;
   box-shadow: 0px 0px 14px -1px rgba(255, 255, 255, 0.82);
@@ -453,7 +459,9 @@ header .arrow-down:hover {
   background-color: rgba(0, 0, 0, 0);
   background-position-x: 1%, 99%;
   background-position-y: 0%, 0%;
-  background-size: 50% 100%, 50% 100%;
+  background-size:
+    50% 100%,
+    50% 100%;
   opacity: 1;
   transform-origin: center center;
   background-repeat: no-repeat;
@@ -481,7 +489,9 @@ header .arrow-down:hover {
   background-color: rgba(0, 0, 0, 0);
   background-position-x: 1%, 99%;
   background-position-y: 0%, 0%;
-  background-size: 50% 100%, 50% 100%;
+  background-size:
+    50% 100%,
+    50% 100%;
   transform-origin: center center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -865,7 +875,7 @@ header .arrow-down:hover {
 }
 #portfolio .project-header {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
 }
 #portfolio .project-content {
@@ -910,6 +920,37 @@ header .arrow-down:hover {
   left: 50%;
   transform: translate(-50%, 0%);
 }
+#portfolio .all-project {
+  background-image: radial-gradient(
+    at center center,
+    rgba(0, 225, 244, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  height: 23em;
+}
+#portfolio .all-project .project-header {
+  font-weight: 300 !important;
+  font-size: 20px !important;
+}
+.all-project .image img,
+.all-project .image iframe {
+  border-radius: 15px;
+  height: 16em;
+}
+@media (min-width: 768px) and (max-width: 1199.9px) {
+  #portfolio .all-project {
+    height: 19em;
+  }
+  .all-project .image img,
+  .all-project .image iframe {
+    height: 12em;
+  }
+  #portfolio .all-project .project-header {
+    font-size: 19px !important;
+  }
+}
 @media (min-width: 992px) {
   #portfolio .projects-holder {
     padding: 10vh !important;
@@ -939,6 +980,16 @@ header .arrow-down:hover {
   }
   #portfolio .fa-arrow-right {
     margin-left: 10px;
+  }
+  #portfolio .all-project {
+    height: 27em;
+  }
+  .all-project .image img,
+  .all-project .image iframe {
+    height: 21em;
+  }
+  #portfolio .all-project .project-header {
+    font-size: 18px !important;
   }
 }
 

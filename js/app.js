@@ -1,4 +1,3 @@
-
 // Arrow color
 const svgElement = document.querySelector(".arrow-down");
 svgElement.style.fill = "#ffffff";
@@ -150,7 +149,6 @@ buttons.forEach((button) => {
   });
 });
 
-
 // Add click event listener to each button
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -160,7 +158,7 @@ buttons.forEach((button) => {
     button.classList.add("active-btn");
 
     const buttonId = button.getAttribute("id"); // Get the id of the clicked button
-    const projects = document.querySelectorAll(".project"); // Get all project elements
+    const projects = document.querySelectorAll(".project-handle"); // Get all project elements
 
     // Toggle the visibility of projects based on the button clicked
     projects.forEach((project) => {
@@ -174,7 +172,7 @@ buttons.forEach((button) => {
 });
 
 // Set the initial display for each project
-const projects = document.querySelectorAll(".project");
+const projects = document.querySelectorAll(".project-handle");
 projects.forEach((project) => {
   project.style.display = project.classList.contains("selected-works")
     ? "block"
@@ -255,25 +253,44 @@ window.addEventListener("scroll", function () {
 
 function loadSvgFile(url, className, containerSelector) {
   fetch(url)
-    .then(response => response.text())
-    .then(svgData => {
+    .then((response) => response.text())
+    .then((svgData) => {
       const parser = new DOMParser();
-      const svgElement = parser.parseFromString(svgData, 'image/svg+xml').documentElement;
-      svgElement.classList.add('img-fluid', 'px-3', className);
+      const svgElement = parser.parseFromString(
+        svgData,
+        "image/svg+xml"
+      ).documentElement;
+      svgElement.classList.add("img-fluid", "px-3", className);
 
       const container = document.querySelector(containerSelector);
       container.appendChild(svgElement);
     })
-    .catch(error => {
-      console.error('Error loading SVG file:', error);
+    .catch((error) => {
+      console.error("Error loading SVG file:", error);
     });
 }
 
-loadSvgFile('/pics/logos/DBT.svg', 'dbt', '.dbt-holder div');
-loadSvgFile('/pics/logos/GA4.svg', 'google-analytics', '.google-analytics-holder div');
-loadSvgFile('/pics/logos/google-big-query.svg', 'google-query', '.google-query-holder div');
-loadSvgFile('/pics/logos/Informatica.svg', 'informatica', '.informatica-holder div');
-loadSvgFile('/pics/logos/microsoft-sql-server.svg', 'microsoft-sql', '.microsoft-sql-holder div');
-loadSvgFile('/pics/logos/python.svg', 'python', '.python-holder div');
-loadSvgFile('/pics/logos/Snowflake.svg', 'snowflake', '.snowflake-holder div');
-loadSvgFile('/pics/logos/tableau.svg', 'tableau', '.tableau-holder div');
+loadSvgFile("/pics/logos/DBT.svg", "dbt", ".dbt-holder div");
+loadSvgFile(
+  "/pics/logos/GA4.svg",
+  "google-analytics",
+  ".google-analytics-holder div"
+);
+loadSvgFile(
+  "/pics/logos/google-big-query.svg",
+  "google-query",
+  ".google-query-holder div"
+);
+loadSvgFile(
+  "/pics/logos/Informatica.svg",
+  "informatica",
+  ".informatica-holder div"
+);
+loadSvgFile(
+  "/pics/logos/microsoft-sql-server.svg",
+  "microsoft-sql",
+  ".microsoft-sql-holder div"
+);
+loadSvgFile("/pics/logos/python.svg", "python", ".python-holder div");
+loadSvgFile("/pics/logos/Snowflake.svg", "snowflake", ".snowflake-holder div");
+loadSvgFile("/pics/logos/tableau.svg", "tableau", ".tableau-holder div");
