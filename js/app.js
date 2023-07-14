@@ -136,14 +136,26 @@ cards.forEach((card) => {
 
 // Get all the buttons
 const buttons = document.querySelectorAll("#portfolio .btns button");
+const allBtn = document.querySelector("#portfolio .btns #all");
+const hoverBtnAllBg = document.querySelector(
+  "#portfolio .btns .hover-btn-all-bg"
+);
+hoverBtnAllBg.style.width = 0;
+allBtn.addEventListener("click", () => {
+  hoverBtnAllBg.style.width = "51px";
+});
 
 // Add hover event listener to each button
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
+    //if btn id is !all then remove hover-btn-all-bg
+    if (button.id !== "all") {
+      hoverBtnAllBg.style.width = 0;
+      hoverBtnAllBg.style.transition = "none";
+    }
     const hoverBtnBg = document.querySelector("#portfolio .btns .hover-btn-bg");
     const width = button.dataset.width;
     const transform = button.dataset.transform;
-
     hoverBtnBg.style.width = width;
     hoverBtnBg.style.transform = transform;
   });

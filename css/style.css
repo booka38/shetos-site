@@ -748,7 +748,7 @@ header .arrow-down:hover {
 }
 
 #portfolio .btns {
-  background-color: white;
+  background-color: #29292b;
   display: inline-block;
   border-radius: 30px;
   transform: translateX(0);
@@ -759,7 +759,19 @@ header .arrow-down:hover {
   margin: 3.29px;
   height: 46px;
   width: 143px;
-  background-color: black;
+  background-color: #0b1423;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  z-index: -1;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+.hover-btn-all-bg {
+  position: absolute;
+  margin: 3.29px;
+  height: 44px;
+  background-color: #0b1423;
   left: 0;
   top: 0;
   border-radius: 30px;
@@ -771,7 +783,7 @@ header .arrow-down:hover {
 #portfolio .btn {
   border-radius: 30px;
   border: none;
-  color: black;
+  color: white;
 }
 
 #portfolio .active-btn {
@@ -951,21 +963,19 @@ header .arrow-down:hover {
     font-size: 19px !important;
   }
 }
-@media (min-width: 992px) {
-  #portfolio .projects-holder {
-    padding: 10vh !important;
-  }
-}
 @media (max-width: 767.9px) {
   #portfolio .hover-btn-bg {
     display: none;
   }
-  #portfolio .btns .btn:hover {
-    background-color: black;
+  #portfolio .hover-btn-all-bg {
+    display: none;
   }
   #portfolio .active-btn {
     color: white;
-    background-color: black;
+    background-color: #0b1423;
+  }
+  #portfolio .btns {
+    margin-bottom: 1rem;
   }
 
   .Btn {
