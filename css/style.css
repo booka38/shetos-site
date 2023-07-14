@@ -748,7 +748,7 @@ header .arrow-down:hover {
 }
 
 #portfolio .btns {
-  background-color: #29292b;
+  background-color: white;
   display: inline-block;
   border-radius: 30px;
   transform: translateX(0);
@@ -759,7 +759,7 @@ header .arrow-down:hover {
   margin: 3.29px;
   height: 46px;
   width: 143px;
-  background-color: #0b1423;
+  background-color: black;
   left: 0;
   top: 0;
   border-radius: 30px;
@@ -771,7 +771,7 @@ header .arrow-down:hover {
   position: absolute;
   margin: 3.29px;
   height: 44px;
-  background-color: #0b1423;
+  background-color: black;
   left: 0;
   top: 0;
   border-radius: 30px;
@@ -783,7 +783,7 @@ header .arrow-down:hover {
 #portfolio .btn {
   border-radius: 30px;
   border: none;
-  color: white;
+  color: black;
 }
 
 #portfolio .active-btn {
@@ -972,7 +972,7 @@ header .arrow-down:hover {
   }
   #portfolio .active-btn {
     color: white;
-    background-color: #0b1423;
+    background-color: black;
   }
   #portfolio .btns {
     margin-bottom: 1rem;
