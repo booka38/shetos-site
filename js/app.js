@@ -306,3 +306,18 @@ loadSvgFile(
 loadSvgFile("/pics/logos/python.svg", "python", ".python-holder div");
 loadSvgFile("/pics/logos/Snowflake.svg", "snowflake", ".snowflake-holder div");
 loadSvgFile("/pics/logos/tableau.svg", "tableau", ".tableau-holder div");
+
+//set zoom iframe to 2
+// window.addEventListener("DOMContentLoaded", (event) => {
+//   var iframe = document.getElementById("iframe");
+//   if (iframe) {
+//     iframe.addEventListener("load", function () {
+//       // Set the default zoom level to '2'
+//       var iframeDocument =
+//         iframe.contentDocument || iframe.contentWindow.document;
+//       if (iframeDocument && iframeDocument.body) {
+//         iframeDocument.body.style.zoom = "2";
+//       }
+//     });
+//   }
+// });

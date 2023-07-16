@@ -951,9 +951,17 @@ header .arrow-down:hover {
   border-radius: 15px;
   height: 16em;
 }
+.iframe {
+  zoom: 4;
+}
 @media (min-width: 1200px) {
   .container-portfolio {
     max-width: 960px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .container-portfolio {
+    max-width: 785px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199.9px) {
@@ -965,7 +973,7 @@ header .arrow-down:hover {
     height: 12em;
   }
   #portfolio .all-project .project-header {
-    font-size: 19px !important;
+    font-size: 20px !important;
   }
 }
 @media (max-width: 767.9px) {
@@ -1005,6 +1013,14 @@ header .arrow-down:hover {
   }
   #portfolio .all-project .project-header {
     font-size: 18px !important;
+  }
+}
+@media (min-width: 461px) and (max-width: 575.9px) {
+  .container-portfolio {
+    width: 86% !important;
+  }
+  #portfolio .all-project .project-header {
+    font-size: 17px !important;
   }
 }
 
@@ -1310,7 +1326,7 @@ body.light.contact .contactform textarea:focus,
 
 /* end contact */
 
-/* adjustment for media query 400px or low */
+/* adjustment for media query 460px or low */
 @media (max-width: 460px) {
   header .text-holder {
     padding: 0;
@@ -1339,6 +1355,13 @@ body.light.contact .contactform textarea:focus,
   .contact .email-me,
   .contact .whatsapp-me a {
     font-size: 15px;
+  }
+  #portfolio .all-project {
+    height: 25em;
+  }
+  .all-project .image img,
+  .all-project .image iframe {
+    height: 18em;
   }
 }
 
