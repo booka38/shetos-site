@@ -293,11 +293,7 @@ loadSvgFile(
   "google-query",
   ".google-query-holder div"
 );
-loadSvgFile(
-  "/pics/logos/Informatica.svg",
-  "informatica",
-  ".informatica-holder div"
-);
+loadSvgFile("/pics/logos/powerbi.svg", "powerbi", ".powerbi-holder div");
 loadSvgFile(
   "/pics/logos/microsoft-sql-server.svg",
   "microsoft-sql",

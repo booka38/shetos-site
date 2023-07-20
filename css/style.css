@@ -610,11 +610,8 @@ header .arrow-down:hover {
 .tools .google-analytics {
   scale: 1.2;
 }
-.tools .informatica {
-  scale: 2.2;
-}
-.tools .snowflake-holder,
-.informatica-holder {
+
+.tools .snowflake-holder {
   overflow: hidden;
 }
 .tools .snowflake {
@@ -655,14 +652,8 @@ header .arrow-down:hover {
 .google-query-holder:hover path {
   fill: #59585b !important;
 }
-.informatica-holder:hover path {
+.powerbi-holder:hover path {
   fill: #656565 !important;
-}
-.informatica-holder:hover .st1 {
-  fill: #579acd !important;
-}
-.informatica-holder:hover .st2 {
-  fill: #fee975 !important;
 }
 .microsoft-sql-holder:hover .one,
 .microsoft-sql-holder:hover .two,
