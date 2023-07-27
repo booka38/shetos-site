@@ -790,7 +790,7 @@ header .arrow-down:hover {
 #portfolio .project .image img {
   border-radius: 15px;
   position: relative;
-  top: 25px;
+  top: 15px;
 }
 
 #portfolio .fa-arrow-right {
