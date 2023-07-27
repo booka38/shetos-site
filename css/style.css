@@ -145,7 +145,7 @@ nav .navbar-nav li a:hover {
   }
   @media (max-width: 576px) {
     #header-bg {
-      background-size: 1400px 1000px;
+      background-size: 1500px 1000px;
     }
   }
 }
