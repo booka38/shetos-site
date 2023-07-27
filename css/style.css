@@ -141,6 +141,12 @@ nav .navbar-nav li a:hover {
 @media (max-width: 768px) {
   #header-bg {
     background-image: url(/pics/header-bg.webp);
+    background-size: 2000px 1000px;
+  }
+  @media (max-width: 576px) {
+    #header-bg {
+      background-size: 1200px 1000px;
+    }
   }
 }
 
@@ -883,6 +889,11 @@ header .arrow-down:hover {
   font-size: 12px;
   color: white;
 }
+.github-container:hover {
+  background-color: #e74d61;
+  transition: all 0.3s ease-in-out;
+}
+
 @media (min-width: 1200px) {
   .container-portfolio {
     max-width: 960px;
