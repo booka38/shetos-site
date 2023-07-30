@@ -138,10 +138,6 @@ nav .navbar-nav li a:hover {
     center;
   background-repeat: no-repeat, repeat, repeat-y;
 }
-@media (max-width: 768px) {
-  #header-bg {
-  }
-}
 @media (max-width: 576px) {
   #header-bg {
     background-image: url(/pics/header-bg-mobilee_auto_x1a.jpg);
@@ -738,6 +734,24 @@ header .arrow-down:hover {
   margin-bottom: 5vh;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* modal btns  */
+.modal .modal-btn {
+  display: flex;
+  flex-direction: row-reverse;
+  color: white !important;
+  background-color: black !important;
+  border-radius: 8px !important;
+}
+.modal .modal-btn-svg {
+  width: 20px !important;
+  position: relative !important;
+  top: 2px !important;
+  left: 15px !important;
+}
+.modal .modal-btn:hover {
+  background-color: #e74d61 !important;
+  transition: all 0.3s ease-in-out;
+}
 
 #portfolio h2 {
   color: white;
@@ -895,7 +909,7 @@ header .arrow-down:hover {
 
 @media (min-width: 1200px) {
   .container-portfolio {
-    max-width: 960px;
+    max-width: 1020px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.9px) {
