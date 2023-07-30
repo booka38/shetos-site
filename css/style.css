@@ -734,24 +734,6 @@ header .arrow-down:hover {
   margin-bottom: 5vh;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* modal btns  */
-.modal .modal-btn {
-  display: flex;
-  flex-direction: row-reverse;
-  color: white !important;
-  background-color: black !important;
-  border-radius: 8px !important;
-}
-.modal .modal-btn-svg {
-  width: 20px !important;
-  position: relative !important;
-  top: 2px !important;
-  left: 15px !important;
-}
-.modal .modal-btn:hover {
-  background-color: #e74d61 !important;
-  transition: all 0.3s ease-in-out;
-}
 
 #portfolio h2 {
   color: white;
@@ -906,7 +888,24 @@ header .arrow-down:hover {
   background-color: #e74d61;
   transition: all 0.3s ease-in-out;
 }
-
+/* modal btns  */
+#portfolio .modal .modal-btn {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  color: white !important;
+  background-color: black !important;
+  border-radius: 8px !important;
+}
+#portfolio .modal .modal-btn-svg {
+  width: 20px !important;
+  position: relative !important;
+  top: 2px !important;
+  left: 15px !important;
+}
+#portfolio .modal .modal-btn:hover {
+  background-color: #e74d61 !important;
+  transition: all 0.3s ease-in-out;
+}
 @media (min-width: 1200px) {
   .container-portfolio {
     max-width: 1020px;
