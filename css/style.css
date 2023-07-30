@@ -895,6 +895,7 @@ header .arrow-down:hover {
   color: white !important;
   background-color: black !important;
   border-radius: 8px !important;
+  width: 108px;
 }
 #portfolio .modal .modal-btn-svg {
   width: 20px !important;
