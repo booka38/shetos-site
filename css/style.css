@@ -138,12 +138,6 @@ nav .navbar-nav li a:hover {
     center;
   background-repeat: no-repeat, repeat, repeat-y;
 }
-@media (max-width: 576px) {
-  #header-bg {
-    background-image: url(/pics/header-bg-mobilee_auto_x1a.jpg);
-    background-size: 100% 100%;
-  }
-}
 
 /*  start header*/
 
@@ -201,9 +195,11 @@ header .arrow-down:hover {
 @media (max-width: 575px) {
   header .text-holder {
     max-width: none;
+    top: 50%;
   }
   header p {
     font-size: 2.375em;
+    line-height: 1.3;
   }
 }
 
