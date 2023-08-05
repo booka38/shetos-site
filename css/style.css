@@ -8,7 +8,8 @@ header .header-text,
 #services h2,
 #portfolio h2,
 #portfolio .btns,
-.project-header {
+.project-header,
+.tools .tools-title {
   font-family: "Bai Jamjuree", sans-serif !important;
   color: rgb(247, 248, 248) !important;
   font-weight: 400;
@@ -435,7 +436,7 @@ header .arrow-down:hover {
 /*  start services*/
 
 #services {
-  background: linear-gradient(to bottom, #130000 54%, #0b1423 98%);
+  background: linear-gradient(to bottom, #130000 54%, #0b1423 85%);
   color: white;
 }
 .light {
@@ -596,7 +597,63 @@ header .arrow-down:hover {
 /*  end services*/
 /* start tools */
 .tools {
-  background: #0b1423;
+  background: linear-gradient(to top, black -13%, #0b1423 85%);
+}
+.tools-title {
+  position: relative;
+  top: -50px;
+  z-index: 99999999999;
+}
+
+.tools-bg {
+  pointer-events: none;
+  user-select: none;
+  margin-top: -200px !important;
+  margin-bottom: -136px !important;
+  position: relative;
+  margin: 0px auto;
+  height: 600px;
+  overflow: hidden;
+  mask-image: radial-gradient(circle at center center, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(
+    circle at center center,
+    black,
+    transparent 80%
+  );
+}
+.tools-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: radial-gradient(
+    circle at bottom center,
+    #7877c6,
+    transparent 70%
+  );
+  opacity: 0.4;
+}
+.tools-bg::after {
+  content: "";
+  position: absolute;
+  background: rgb(0, 2, 18);
+  width: 200%;
+  left: -50%;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 50%;
+  border-top: 1px solid rgba(120, 118, 197, 0.4);
+  top: 50%;
+}
+.tools-bg-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mask-image: radial-gradient(circle at center bottom, black, transparent);
+  -webkit-mask-image: radial-gradient(
+    circle at center bottom,
+    black,
+    transparent
+  );
 }
 .tools svg {
   width: 150px;
@@ -825,6 +882,12 @@ header .arrow-down:hover {
 #portfolio .carousel {
   max-width: 80%;
 }
+#portfolio .modal-title-edit {
+  display: flex !important;
+  position: relative;
+  top: -27px;
+  left: 23px;
+}
 
 #portfolio .modal img {
   max-width: 70%;
@@ -923,6 +986,15 @@ header .arrow-down:hover {
   }
   #portfolio .all-project .project-header {
     font-size: 20px !important;
+  }
+}
+#travel-header:hover {
+  cursor: pointer;
+}
+@media (max-width: 991.9px) {
+  #portfolio .modal-title-edit {
+    top: -22px;
+    left: 0;
   }
 }
 @media (max-width: 767.9px) {
