@@ -303,25 +303,32 @@ loadSvgFile("/pics/logos/python.svg", "python", ".python-holder div");
 loadSvgFile("/pics/logos/Snowflake.svg", "snowflake", ".snowflake-holder div");
 loadSvgFile("/pics/logos/tableau.svg", "tableau", ".tableau-holder div");
 
-//modal
 let modal = document.querySelector("#travel-modal-all");
 let travrlHeader = document.querySelector("#travel-header");
 let btnClose = document.querySelector("#travel-modal-all .btn-close");
-//if click on travelHeader set modal display to block and opacity to 1 and background to #0000007d; else press esc to close modal or btn-close
-travrlHeader.addEventListener("click", () => {
+
+// Function to open the modal
+function openModal() {
   modal.style.display = "block";
   modal.style.opacity = 1;
   modal.style.background = "#0000007d";
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    modal.style.display = "none";
-    modal.style.opacity = 0;
-    modal.style.background = "none";
-  }
-});
-btnClose.addEventListener("click", () => {
+  document.body.style.overflow = "hidden"; // Prevent scrolling of underlying content
+}
+
+// Function to close the modal
+function closeModal() {
   modal.style.display = "none";
   modal.style.opacity = 0;
   modal.style.background = "none";
+  document.body.style.overflow = "auto"; // Restore scrolling of underlying content
+}
+
+travrlHeader.addEventListener("click", openModal);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
 });
+
+btnClose.addEventListener("click", closeModal);
