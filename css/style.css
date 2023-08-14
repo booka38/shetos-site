@@ -608,8 +608,8 @@ header .arrow-down:hover {
 .tools-bg {
   pointer-events: none;
   user-select: none;
-  margin-top: -97px !important;
-  margin-bottom: -136px !important;
+  margin-top: -95px !important;
+  margin-bottom: -99px !important;
   position: relative;
   margin: 0px auto;
   height: 600px;
