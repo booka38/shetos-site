@@ -313,6 +313,8 @@ function openModal() {
   modal.style.opacity = 1;
   modal.style.background = "#0000007d";
   document.body.style.overflow = "hidden"; // Prevent scrolling of underlying content
+  modal.style.top = 0;
+  modal.style.transition = "all 0.3s ease-in-out";
 }
 
 // Function to close the modal
@@ -321,6 +323,8 @@ function closeModal() {
   modal.style.opacity = 0;
   modal.style.background = "none";
   document.body.style.overflow = "auto"; // Restore scrolling of underlying content
+  modal.style.top = -1200;
+  modal.style.transition = "all 0.3s ease-in-out";
 }
 
 travrlHeader.addEventListener("click", openModal);
