@@ -914,14 +914,11 @@ header .arrow-down:hover {
   font-weight: 300 !important;
   font-size: 20px !important;
 }
-.all-project .image img,
-.all-project .image iframe {
+.all-project .image img {
   border-radius: 15px;
   height: 16em;
 }
-.iframe {
-  zoom: 4;
-}
+
 .github-container {
   position: relative;
   display: flex;
@@ -980,8 +977,7 @@ header .arrow-down:hover {
   #portfolio .all-project {
     height: 21em;
   }
-  .all-project .image img,
-  .all-project .image iframe {
+  .all-project .image img {
     height: 12em;
   }
   #portfolio .all-project .project-header {
@@ -1018,8 +1014,7 @@ header .arrow-down:hover {
   #portfolio .all-project {
     height: 28em;
   }
-  .all-project .image img,
-  .all-project .image iframe {
+  .all-project .image img {
     height: 21em;
   }
   #portfolio .all-project .project-header {
@@ -1370,8 +1365,7 @@ body.light.contact .contactform textarea:focus,
   #portfolio .all-project {
     height: 25em;
   }
-  .all-project .image img,
-  .all-project .image iframe {
+  .all-project .image img {
     height: 18em;
   }
 }
