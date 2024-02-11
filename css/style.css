@@ -212,7 +212,10 @@ header .arrow-down:hover {
   background: #130000;
   color: white;
 }
-
+#cartona-link:hover{
+  color: #0072b1;
+  transition: all .3s ease-in-out;
+}
 .about-me .bg-holder {
   background-image: radial-gradient(at center center, #f4000026, #ffffff00);
   border-radius: 15px;
@@ -981,7 +984,7 @@ header .arrow-down:hover {
     height: 12em;
   }
   #portfolio .all-project .project-header {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 }
 #travel-header:hover {
