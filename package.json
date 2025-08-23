@@ -1,0 +1,26 @@
+{
+  "name": "shetos-site",
+  "version": "1.0.0",
+  "description": "A description of your project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/booka38/shetos-site.git"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/booka38/shetos-site/issues"
+  },
+  "homepage": "https://github.com/booka38/shetos-site#readme",
+  "dependencies": {
+    "googleapis": "^118.0.0",
+    "hover.css": "^2.3.2",
+    "nodemailer": "^6.9.3",
+    "prettier": "^3.0.0"
+  },
+  "devDependencies": {}
+}
